@@ -1,0 +1,16 @@
+<%= link_to("<< Back to list", positions_path, :class => "back-link") %>
+
+<div>
+    <h2>Show Position</h2>
+    
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><%= @position.name %></td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td><%= @position.pos_type %></td>
+        </tr>
+    </table>
+</div>

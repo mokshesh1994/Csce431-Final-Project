@@ -1,0 +1,25 @@
+<div>
+    <h2>Divisions</h2>
+    <%= link_to("Add new division", "#", :class => "action new") %>
+    <br /><br />
+    <table>
+        <tr>
+            <td>#</td>
+            <td>Name</td>
+            <td>Description</td>
+            <td></td>
+        </tr>
+        <% @divisions.each do |division| %>
+        <tr>
+            <td><%= division.id %></td>
+            <td><%= division.name %></td>
+            <td><%= division.description %></td>
+            <td>
+                <%= link_to("Show", division_path(division.id), :class => "action show") %>
+                <%= link_to("Edit", "#", :class => "action edit") %>
+                <%= link_to("Delete", "#", :class => "action delete") %>
+            </td>
+        </tr>
+        <% end %>
+    </table>
+</div>

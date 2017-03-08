@@ -1,0 +1,14 @@
+<%= link_to("<< Back to List", committees_path, :class => "back-link") %>
+
+<div>
+    <h2>Delete Committee</h2>
+    
+    <%= form_for(@committee, :method => "delete") do |f| %>
+        <p>Are you sure you want to permanently delete this committee?</p>
+        <p><%= @committee.name %></p>
+        <div>
+            <%= f.submit("Delete Committee") %>
+            
+        </div>
+    <% end %>
+</div>

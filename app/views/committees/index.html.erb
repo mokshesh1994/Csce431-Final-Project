@@ -1,0 +1,23 @@
+<div>
+    <h2>Committees</h2>
+    <%= link_to("Add new committee", new_committee_path, :class => "action new") %>
+    <br /><br />
+    <table>
+        <tr>
+            <td>#</td>
+            <td>Name</td>
+            <td></td>
+        </tr>
+        <% @committees.each do |committee| %>
+        <tr>
+            <td><%= committee.id %></td>
+            <td><%= committee.name %></td>
+            <td>
+                <%= link_to("Show", committee_path(committee.id), :class => "action show") %>
+                <%= link_to("Edit", edit_committee_path(committee.id), :class => "action edit") %>
+                <%= link_to("Delete", delete_committee_path(committee.id), :class => "action delete") %>
+            </td>
+        </tr>
+        <% end %>
+    </table>
+</div>

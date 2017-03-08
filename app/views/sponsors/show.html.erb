@@ -1,0 +1,28 @@
+<%= link_to("<< Back to list", sponsors_path, :class => "back-link") %>
+
+<div>
+    <h2>Show Sponsor</h2>
+    
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><%= @sponsor.name %></td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td><%= @sponsor.description %></td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td><%= @sponsor.spn_type %></td>
+        </tr>
+        <tr>
+            <td>Link to SEC</td>
+            <td><%= @sponsor.link_to_sec %></td>
+        </tr>
+        <tr>
+            <td>Link to Sponsor</td>
+            <td><%= @sponsor.link_to_sponsor %></td>
+        </tr>
+    </table>
+</div>

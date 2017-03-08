@@ -1,0 +1,31 @@
+<div>
+    <h2>Sponsors</h2>
+    <%= link_to("Add new sponsor", "#", :class => "action new") %>
+    <br /><br />
+    <table>
+        <tr>
+            <td>#</td>
+            <td>Name</td>
+            <td>Description</td>
+            <td>Type</td>
+            <td>Link to SEC</td>
+            <td>Link to Sponsor</td>
+            <td></td>
+        </tr>
+        <% @sponsors.each do |sponsor| %>
+        <tr>
+            <td><%= sponsor.id %></td>
+            <td><%= sponsor.name %></td>
+            <td><%= sponsor.description %></td>
+            <td><%= sponsor.spn_type %></td>
+            <td><%= sponsor.link_to_sec %></td>
+            <td><%= sponsor.link_to_sponsor %></td>
+            <td>
+                <%= link_to("Show", sponsor_path(sponsor.id), :class => "action show") %>
+                <%= link_to("Edit", "#", :class => "action edit") %>
+                <%= link_to("Delete", "#", :class => "action delete") %>
+            </td>
+        </tr>
+        <% end %>
+    </table>
+</div>

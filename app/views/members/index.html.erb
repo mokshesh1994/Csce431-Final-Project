@@ -1,0 +1,39 @@
+<div>
+    <h2>Members</h2>
+    <%= link_to("Add new member", "#", :class => "action new") %>
+    <br /><br />
+    <table>
+        <tr>
+            <td>#</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Password</td>
+            <td>Major</td>
+            <td>Grad Year</td>
+            <td>Member since</td>
+            <td>Hometown</td>
+            <td>Position</td>
+            <td>Division</td>
+            <td></td>
+        </tr>
+        <% @members.each do |member| %>
+        <tr>
+            <td><%= member.id %></td>
+            <td><%= member.name %></td>
+            <td><%= member.email %></td>
+            <td><%= member.password %></td>
+            <td><%= member.major %></td>
+            <td><%= member.grad_year %></td>
+            <td><%= member.member_since %></td>
+            <td><%= member.hometown %></td>
+            <td><%= member.position_id %></td>
+            <td><%= member.division_id %></td>
+            <td>
+                <%= link_to("Show", member_path(member.id), :class => "action show") %>
+                <%= link_to("Edit", "#", :class => "action edit") %>
+                <%= link_to("Delete", "#", :class => "action delete") %>
+            </td>
+        </tr>
+        <% end %>
+    </table>
+</div>

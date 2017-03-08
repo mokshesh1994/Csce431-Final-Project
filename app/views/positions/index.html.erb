@@ -1,0 +1,25 @@
+<div>
+    <h2>Positions</h2>
+    <%= link_to("Add new position", "#", :class => "action new") %>
+    <br /><br />
+    <table>
+        <tr>
+            <td>#</td>
+            <td>Name</td>
+            <td>Type</td>
+            <td></td>
+        </tr>
+        <% @positions.each do |position| %>
+        <tr>
+            <td><%= position.id %></td>
+            <td><%= position.name %></td>
+            <td><%= position.pos_type %></td>
+            <td>
+                <%= link_to("Show", position_path(position.id), :class => "action show") %>
+                <%= link_to("Edit", "#", :class => "action edit") %>
+                <%= link_to("Delete", "#", :class => "action delete") %>
+            </td>
+        </tr>
+        <% end %>
+    </table>
+</div>

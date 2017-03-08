@@ -1,0 +1,16 @@
+<%= link_to("<< Back to list", committees_path, :class => "back-link") %>
+
+<div>
+    <h2>Show Committee</h2>
+    
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><%= @committee.name %></td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td><%= @committee.description %></td>
+        </tr>
+    </table>
+</div>

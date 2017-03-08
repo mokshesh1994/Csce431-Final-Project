@@ -1,0 +1,25 @@
+<div>
+    <h2>Events</h2>
+    <%= link_to("Add new event", "#", :class => "action new") %>
+    <br /><br />
+    <table>
+        <tr>
+            <td>#</td>
+            <td>Name</td>
+            <td>Link</td>
+            <td></td>
+        </tr>
+        <% @events.each do |event| %>
+        <tr>
+            <td><%= event.id %></td>
+            <td><%= event.name %></td>
+            <td><%= event.link_to_event %></td>
+            <td>
+                <%= link_to("Show", event_path(event.id), :class => "action show") %>
+                <%= link_to("Edit", "#", :class => "action edit") %>
+                <%= link_to("Delete", "#", :class => "action delete") %>
+            </td>
+        </tr>
+        <% end %>
+    </table>
+</div>
