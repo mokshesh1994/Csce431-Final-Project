@@ -1,0 +1,31 @@
+<%= link_to("<< Back to List", members_path, :class => "back-link") %>
+
+<div>
+    <h2>Delete Member</h2>
+    
+    <%= form_for(@member, :method => "delete") do |f| %>
+        <p>Are you sure you want to permanently delete this member?</p>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><%= @member.name %></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><%= @member.email %></td>
+            </tr>
+            <tr>
+                <td>Major</td>
+                <td><%= @member.major %></td>
+            </tr>
+            <tr>
+                <td>Graduation Year</td>
+                <td><%= @member.grad_year %></td>
+            </tr>
+        </table>
+        <div>
+            <%= f.submit("Delete Member") %>
+            
+        </div>
+    <% end %>
+</div>

@@ -1,0 +1,44 @@
+<%= link_to("<< Back to list", members_path, :class => "back-link") %>
+
+<div>
+    <h2>Show Member</h2>
+    
+    <table>
+        <tr>
+            <td>Name</td>
+            <td><%= @member.name %></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><%= @member.email %></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><%= @member.password %></td>
+        </tr>
+        <tr>
+            <td>Major</td>
+            <td><%= @member.major %></td>
+        </tr>
+        <tr>
+            <td>Grad Year</td>
+            <td><%= @member.grad_year %></td>
+        </tr>
+        <tr>
+            <td>Member since</td>
+            <td><%= @member.member_since %></td>
+        </tr>
+        <tr>
+            <td>Hometown</td>
+            <td><%= @member.hometown %></td>
+        </tr>
+        <tr>
+            <td>Position</td>
+            <td><%= @member.position_id %></td>
+        </tr>
+        <tr>
+            <td>Division</td>
+            <td><%= @member.division_id %></td>
+        </tr>
+    </table>
+</div>

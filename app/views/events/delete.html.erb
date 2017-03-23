@@ -1,0 +1,23 @@
+<%= link_to("<< Back to List", events_path, :class => "back-link") %>
+
+<div>
+    <h2>Delete Event</h2>
+    
+    <%= form_for(@event, :method => "delete") do |f| %>
+        <p>Are you sure you want to permanently delete this event?</p>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><%= @event.name %></td>
+            </tr>
+            <tr>
+                <td>Link to Event</td>
+                <td><%= @event.link_to_event %></td>
+            </tr>
+        </table>
+        <div>
+            <%= f.submit("Delete event") %>
+            
+        </div>
+    <% end %>
+</div>

@@ -1,0 +1,22 @@
+<%= link_to("<< Back to List", events_path, :class => "back-link") %>
+
+<div>
+    <h2>Create Event</h2>
+    <%= form_for(@event) do |f| %>
+        <%= error_messages_for(f.object) %>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><%= f.text_field(:name) %></td>
+            </tr>
+            <tr>
+                <td>Link</td>
+                <td><%= f.text_field(:link_to_event) %></td>
+            </tr>
+        </table>
+        
+        <div>
+            <%= f.submit("Create Event") %>
+        </div>
+    <% end %>
+</div>

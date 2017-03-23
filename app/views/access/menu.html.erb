@@ -1,0 +1,13 @@
+<div>
+    <%= flash[:notice] %>
+    <h2>Admin Menu</h2>
+    <ul>
+        <li><%= link_to("Manage Committees", committees_path) %></li>
+        <li><%= link_to("Manage Divisions", divisions_path) %></li>
+        <li><%= link_to("Manage Events", events_path) %></li>
+        <li><%= link_to("Manage Positions", positions_path) %></li>
+        <li><%= link_to("Manage Sponsors", sponsors_path) %></li>
+        <li><%= link_to("Manage Members", members_path) %></li>
+        <li><%= link_to("Logout", access_logout_path) %></li>
+    </ul>
+</div>

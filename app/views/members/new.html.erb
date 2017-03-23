@@ -1,0 +1,54 @@
+<%= link_to("<< Back to List", members_path, :class => "back-link") %>
+
+<div>
+    <h2>Create Member</h2>
+    <%= form_for(@member) do |f| %>
+        <%= error_messages_for(f.object) %>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><%= f.text_field(:name) %></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><%= f.text_field(:email) %></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><%= f.text_field(:password) %></td>
+            </tr>
+            <tr>
+                <td>Major</td>
+                <td><%= f.text_field(:major) %></td>
+            </tr>
+            <tr>
+                <td>Graduation Year</td>
+                <td><%= f.text_field(:grad_year) %></td>
+            </tr>
+            <tr>
+                <td>Member Since</td>
+                <td><%= f.text_field(:member_since) %></td>
+            </tr>
+            <tr>
+                <td>Hometown</td>
+                <td><%= f.text_field(:hometown) %></td>
+            </tr>
+            <tr>
+                <td>Professional Interests</td>
+                <td><%= f.text_area(:pro_interests) %></td>
+            </tr>
+            <tr>
+                <td>Position</td>
+                <td><%= collection_select(:member, :position_id, Position.order(:name), :id, :name, {}, {:multiple => false}) %></td>
+            </tr>
+            <tr>
+                <td>Division</td>
+                <td><%= collection_select(:member, :division_id, Division.order(:name), :id, :name, {}, {:multiple => false}) %></td>
+            </tr>
+        </table>
+        
+        <div>
+            <%= f.submit("Create Member") %>
+        </div>
+    <% end %>
+</div>

@@ -1,0 +1,23 @@
+<%= link_to("<< Back to List", positions_path, :class => "back-link") %>
+
+<div>
+    <h2>Delete Position</h2>
+    
+    <%= form_for(@position, :method => "delete") do |f| %>
+        <p>Are you sure you want to permanently delete this position?</p>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><%= @position.name %></td>
+            </tr>
+            <tr>
+                <td>Type</td>
+                <td><%= @position.pos_type %></td>
+            </tr>
+        </table>
+        <div>
+            <%= f.submit("Delete Position") %>
+            
+        </div>
+    <% end %>
+</div>

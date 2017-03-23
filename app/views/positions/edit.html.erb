@@ -1,0 +1,22 @@
+<%= link_to("<< Back to List", positions_path, :class => "back-link") %>
+
+<div>
+    <h2>Update Position</h2>
+    <%= form_for(@position) do |f| %>
+        <%= error_messages_for(f.object) %>
+        <table>
+            <tr>
+                <td>Name</td>
+                <td><%= f.text_field(:name) %></td>
+            </tr>
+            <tr>
+                <td>Type</td>
+                <td><%= f.text_field(:pos_type) %></td>
+            </tr>
+        </table>
+        
+        <div>
+            <%= f.submit("Update Type") %>
+        </div>
+    <% end %>
+</div>
