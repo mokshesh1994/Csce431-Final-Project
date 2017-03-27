@@ -1,16 +1,14 @@
 <div>
     <h2>Sponsors</h2>
-    <%= link_to("Add new sponsor", new_sponsor_path, :class => "action new") %>
-    <br /><br />
-    <table>
+    <table class="table table-condensed table-striped table-bordered">
         <tr>
-            <td>#</td>
-            <td>Name</td>
-            <td>Description</td>
-            <td>Type</td>
-            <td>Link to SEC</td>
-            <td>Link to Sponsor</td>
-            <td></td>
+            <th>#</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Type</th>
+            <th>Link to SEC</th>
+            <th>Link to Sponsor</th>
+            <th></th>
         </tr>
         <% @sponsors.each do |sponsor| %>
         <tr>
@@ -21,11 +19,13 @@
             <td><%= sponsor.link_to_sec %></td>
             <td><%= sponsor.link_to_sponsor %></td>
             <td>
-                <%= link_to("Show", sponsor_path(sponsor.id), :class => "action show") %>
-                <%= link_to("Edit", edit_sponsor_path(sponsor.id), :class => "action edit") %>
-                <%= link_to("Delete", delete_sponsor_path(sponsor.id), :class => "action delete") %>
+                <%= link_to("Show", sponsor_path(sponsor.id), :class => "btn btn-primary btn-xs") %>
+                <%= link_to("Edit", edit_sponsor_path(sponsor.id), :class => "btn btn-primary btn-xs") %>
+                <%= link_to("Delete", delete_sponsor_path(sponsor.id), :class => "btn btn-danger btn-xs") %>
             </td>
         </tr>
         <% end %>
     </table>
+    <%= link_to("Add new sponsor", new_sponsor_path, :class => "btn btn-sm btn-success") %>
+    <%= link_to("Back to menu", access_menu_path, :class => "btn btn-sm btn-warning")%>
 </div>

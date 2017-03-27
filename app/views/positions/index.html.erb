@@ -1,13 +1,11 @@
 <div>
     <h2>Positions</h2>
-    <%= link_to("Add new position", new_position_path, :class => "action new") %>
-    <br /><br />
-    <table>
+    <table class="table table-condensed table-striped table-bordered">
         <tr>
-            <td>#</td>
-            <td>Name</td>
-            <td>Type</td>
-            <td></td>
+            <th>#</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th></th>
         </tr>
         <% @positions.each do |position| %>
         <tr>
@@ -15,11 +13,13 @@
             <td><%= position.name %></td>
             <td><%= position.pos_type %></td>
             <td>
-                <%= link_to("Show", position_path(position.id), :class => "action show") %>
-                <%= link_to("Edit", edit_position_path(position.id), :class => "action edit") %>
-                <%= link_to("Delete", delete_position_path(position.id), :class => "action delete") %>
+                <%= link_to("Show", position_path(position.id), :class => "btn btn-primary btn-xs") %>
+                <%= link_to("Edit", edit_position_path(position.id), :class => "btn btn-primary btn-xs") %>
+                <%= link_to("Delete", delete_position_path(position.id), :class => "btn btn-danger btn-xs") %>
             </td>
         </tr>
         <% end %>
     </table>
+    <%= link_to("Add new position", new_position_path, :class => "btn btn-sm btn-success") %>
+    <%= link_to("Back to menu", access_menu_path, :class => "btn btn-sm btn-warning")%>
 </div>

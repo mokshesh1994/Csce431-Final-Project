@@ -1,13 +1,12 @@
 <div>
     <h2>Divisions</h2>
-    <%= link_to("Add new division", new_division_path, :class => "action new") %>
-    <br /><br />
-    <table>
+   
+    <table class="table table-condensed table-striped table-bordered">
         <tr>
-            <td>#</td>
-            <td>Name</td>
-            <td>Description</td>
-            <td></td>
+            <th>#</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th></th>
         </tr>
         <% @divisions.each do |division| %>
         <tr>
@@ -15,11 +14,13 @@
             <td><%= division.name %></td>
             <td><%= division.description %></td>
             <td>
-                <%= link_to("Show", division_path(division.id), :class => "action show") %>
-                <%= link_to("Edit", edit_division_path(division.id), :class => "action edit") %>
-                <%= link_to("Delete", delete_division_path(division.id), :class => "action delete") %>
+                <%= link_to("Show", division_path(division.id), :class => "btn btn-primary btn-xs") %>
+                <%= link_to("Edit", edit_division_path(division.id), :class => "btn btn-primary btn-xs") %>
+                <%= link_to("Delete", delete_division_path(division.id), :class => "btn btn-danger btn-xs") %>
             </td>
         </tr>
         <% end %>
     </table>
+     <%= link_to("Add new division", new_division_path, :class => "btn btn-sm btn-success") %>
+     <%= link_to("Back to menu", access_menu_path, :class => "btn btn-sm btn-warning")%>
 </div>

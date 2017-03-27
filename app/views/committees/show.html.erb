@@ -1,16 +1,19 @@
-<%= link_to("<< Back to list", committees_path, :class => "back-link") %>
 
 <div>
     <h2>Show Committee</h2>
     
-    <table>
+    <table class="tableCenter">
         <tr>
-            <td>Name</td>
+            <td class="columnLabel boldText">Name:</td>
             <td><%= @committee.name %></td>
         </tr>
         <tr>
-            <td>Description</td>
+            <td class="columnLabel boldText">Description:</td>
             <td><%= @committee.description %></td>
         </tr>
     </table>
+    
+    <div class="divCenter">
+        <%= link_to("Back to list", committees_path, :class => "btn btn-warning btn-sm") %>
+    </div>
 </div>

@@ -1,12 +1,13 @@
 <div>
+    <h2>Login</h2>
     <%= form_tag(access_attempt_login_path, :method => :post) do %>
-        <table>
+        <table class="tableCenter">
             <tr>
-                <td><%= label_tag(:email) %></td>
+                <td class="columnLabel"><%= label_tag(:email) %></td>
                 <td><%= text_field_tag(:email, params[:email]) %></td>
             </tr>
             <tr>
-                <td><%= label_tag(:password) %></td>
+                <td class="columnLabel"><%= label_tag(:password) %></td>
                 <td><%= password_field_tag(:password) %></td>
             </tr>
             <tr>

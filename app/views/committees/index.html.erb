@@ -1,23 +1,23 @@
 <div>
     <h2>Committees</h2>
-    <%= link_to("Add new committee", new_committee_path, :class => "action new") %>
-    <br /><br />
-    <table>
+    <table class="table table-condensed table-bordered table-striped">
         <tr>
-            <td>#</td>
-            <td>Name</td>
-            <td></td>
+            <th>#</th>
+            <th>Name</th>
+            <th></th>
         </tr>
         <% @committees.each do |committee| %>
         <tr>
             <td><%= committee.id %></td>
             <td><%= committee.name %></td>
             <td>
-                <%= link_to("Show", committee_path(committee.id), :class => "action show") %>
-                <%= link_to("Edit", edit_committee_path(committee.id), :class => "action edit") %>
-                <%= link_to("Delete", delete_committee_path(committee.id), :class => "action delete") %>
+                <%= link_to("Show", committee_path(committee.id), :class => "btn btn-primary btn-xs") %>
+                <%= link_to("Edit", edit_committee_path(committee.id), :class => "btn btn-primary btn-xs") %>
+                <%= link_to("Delete", delete_committee_path(committee.id), :class => "btn btn-danger btn-xs") %>
             </td>
         </tr>
         <% end %>
     </table>
+    <%= link_to("Add new committee", new_committee_path, :class => "btn btn-success btn-sm") %>
+    <%= link_to("Back to menu", access_menu_path, :class => "btn btn-sm btn-warning")%>
 </div>

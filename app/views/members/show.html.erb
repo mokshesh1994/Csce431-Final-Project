@@ -1,44 +1,47 @@
-<%= link_to("<< Back to list", members_path, :class => "back-link") %>
 
 <div>
     <h2>Show Member</h2>
     
-    <table>
+    <table class="tableCenter">
         <tr>
-            <td>Name</td>
+            <td class="columnLabel boldText">Name:</td>
             <td><%= @member.name %></td>
         </tr>
         <tr>
-            <td>Email</td>
+            <td class="columnLabel boldText">Email:</td>
             <td><%= @member.email %></td>
         </tr>
         <tr>
-            <td>Password</td>
+            <td class="columnLabel boldText">Password:</td>
             <td><%= @member.password %></td>
         </tr>
         <tr>
-            <td>Major</td>
+            <td class="columnLabel boldText">Major:</td>
             <td><%= @member.major %></td>
         </tr>
         <tr>
-            <td>Grad Year</td>
+            <td class="columnLabel boldText">Grad Year:</td>
             <td><%= @member.grad_year %></td>
         </tr>
         <tr>
-            <td>Member since</td>
+            <td class="columnLabel boldText">Member since:</td>
             <td><%= @member.member_since %></td>
         </tr>
         <tr>
-            <td>Hometown</td>
+            <td class="columnLabel boldText">Hometown:</td>
             <td><%= @member.hometown %></td>
         </tr>
         <tr>
-            <td>Position</td>
+            <td class="columnLabel boldText">Position:</td>
             <td><%= @member.position_id %></td>
         </tr>
         <tr>
-            <td>Division</td>
+            <td class="columnLabel boldText">Division:</td>
             <td><%= @member.division_id %></td>
         </tr>
     </table>
+    
+    <div class="divCenter">
+        <%= link_to("Back to list", members_path, :class => "btn btn-warning btn-sm") %>
+    </div>
 </div>

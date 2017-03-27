@@ -1,19 +1,17 @@
 <div>
     <h2>Members</h2>
-    <%= link_to("Add new member", new_member_path, :class => "action new") %>
-    <br /><br />
-    <table>
+    <table class="table table-condensed table-striped table-bordered">
         <tr>
-            <td>#</td>
-            <td>Name</td>
-            <td>Email</td>
-            <td>Password</td>
-            <td>Major</td>
-            <td>Grad Year</td>
-            <td>Member since</td>
-            <td>Hometown</td>
-            <td>Position</td>
-            <td>Division</td>
+            <th>#</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
+            <th>Major</th>
+            <th>Grad Year</th>
+            <th>Member since</th>
+            <th>Hometown</th>
+            <th>Position</th>
+            <th>Division</th>
             <td></td>
         </tr>
         <% @members.each do |member| %>
@@ -29,11 +27,13 @@
             <td><%= member.position_id %></td>
             <td><%= member.division_id %></td>
             <td>
-                <%= link_to("Show", member_path(member.id), :class => "action show") %>
-                <%= link_to("Edit", edit_member_path(member.id), :class => "action edit") %>
-                <%= link_to("Delete", delete_member_path(member.id), :class => "action delete") %>
+                <%= link_to("Show", member_path(member.id), :class => "btn btn-primary btn-xs") %>
+                <%= link_to("Edit", edit_member_path(member.id), :class => "btn btn-primary btn-xs") %>
+                <%= link_to("Delete", delete_member_path(member.id), :class => "btn btn-danger btn-xs") %>
             </td>
         </tr>
         <% end %>
     </table>
+    <%= link_to("Add new member", new_member_path, :class => "btn btn-success btn-sm") %>
+    <%= link_to("Back to menu", access_menu_path, :class => "btn btn-sm btn-warning")%>
 </div>

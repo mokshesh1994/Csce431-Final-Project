@@ -1,54 +1,54 @@
-<%= link_to("<< Back to List", members_path, :class => "back-link") %>
 
 <div>
     <h2>Update Member</h2>
     <%= form_for(@member) do |f| %>
         <%= error_messages_for(f.object) %>
-        <table>
+        <table class="tableCenter">
             <tr>
-                <td>Name</td>
-                <td><%= f.text_field(:name) %></td>
+                <td class="columnLabel">Name</td>
+                <td><%= f.text_field(:name, size: 40) %></td>
             </tr>
             <tr>
-                <td>Email</td>
-                <td><%= f.text_field(:email) %></td>
+                <td class="columnLabel">Email</td>
+                <td><%= f.text_field(:email, size: 40) %></td>
             </tr>
             <tr>
-                <td>Password</td>
-                <td><%= f.text_field(:password) %></td>
+                <td class="columnLabel">Password</td>
+                <td><%= f.text_field(:password, size: 40) %></td>
             </tr>
             <tr>
-                <td>Major</td>
-                <td><%= f.text_field(:major) %></td>
+                <td class="columnLabel">Major</td>
+                <td><%= f.text_field(:major, size: 40) %></td>
             </tr>
             <tr>
-                <td>Graduation Year</td>
-                <td><%= f.text_field(:grad_year) %></td>
+                <td class="columnLabel">Graduation Year</td>
+                <td><%= f.text_field(:grad_year, size: 40) %></td>
             </tr>
             <tr>
-                <td>Member Since</td>
-                <td><%= f.text_field(:member_since) %></td>
+                <td class="columnLabel">Member Since</td>
+                <td><%= f.text_field(:member_since, size: 40) %></td>
             </tr>
             <tr>
-                <td>Hometown</td>
-                <td><%= f.text_field(:hometown) %></td>
+                <td class="columnLabel">Hometown</td>
+                <td><%= f.text_field(:hometown, size: 40) %></td>
             </tr>
             <tr>
-                <td>Professional Interests</td>
-                <td><%= f.text_area(:pro_interests) %></td>
+                <td class="columnLabel">Professional Interests</td>
+                <td><%= f.text_area(:pro_interests, cols: 43, rows: 10) %></td>
             </tr>
             <tr>
-                <td>Position</td>
-                <td><%= f.text_field(:position_id) %></td>
+                <td class="columnLabel">Position</td>
+                <td><%= f.text_field(:position_id, size: 40) %></td>
             </tr>
             <tr>
-                <td>Division</td>
-                <td><%= f.text_field(:division_id) %></td>
+                <td class="columnLabel">Division</td>
+                <td><%= f.text_field(:division_id, size: 40) %></td>
             </tr>
         </table>
         
-        <div>
-            <%= f.submit("Update Member") %>
+        <div class="divCenter">
+            <%= f.submit("Update Member", :class => "btn btn-success btn-sm") %>
+            <%= link_to("Back to List", members_path, :class => "btn btn-warning btn-sm") %>
         </div>
     <% end %>
 </div>

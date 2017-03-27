@@ -1,16 +1,19 @@
-<%= link_to("<< Back to list", positions_path, :class => "back-link") %>
 
 <div>
     <h2>Show Position</h2>
     
-    <table>
+    <table class="tableCenter">
         <tr>
-            <td>Name</td>
+            <td class="columnLabel boldText">Name:</td>
             <td><%= @position.name %></td>
         </tr>
         <tr>
-            <td>Type</td>
+            <td class="columnLabel boldText">Type:</td>
             <td><%= @position.pos_type %></td>
         </tr>
     </table>
+    
+    <div class="divCenter">
+        <%= link_to("Back to list", positions_path, :class => "btn btn-warning btn sm") %>    
+    </div>
 </div>

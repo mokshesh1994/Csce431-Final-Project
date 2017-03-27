@@ -1,16 +1,19 @@
-<%= link_to("<< Back to list", divisions_path, :class => "back-link") %>
 
 <div>
     <h2>Show Division</h2>
     
-    <table>
+    <table class="tableCenter">
         <tr>
-            <td>Name</td>
+            <td class="columnLabel boldText">Name:</td>
             <td><%= @division.name %></td>
         </tr>
         <tr>
-            <td>Description</td>
+            <td class="columnLabel boldText">Description:</td>
             <td><%= @division.description %></td>
         </tr>
     </table>
+    
+    <div class="divCenter">
+        <%= link_to("Back to list", divisions_path, :class => "btn btn-warning btn-sm") %>
+    </div>
 </div>

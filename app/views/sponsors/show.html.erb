@@ -1,28 +1,29 @@
-<%= link_to("<< Back to list", sponsors_path, :class => "back-link") %>
 
 <div>
     <h2>Show Sponsor</h2>
-    
-    <table>
+    <table class="tableCenter">
         <tr>
-            <td>Name</td>
+            <td class="columnLabel boldText">Name:</td>
             <td><%= @sponsor.name %></td>
         </tr>
         <tr>
-            <td>Description</td>
+            <td class="columnLabel boldText">Description:</td>
             <td><%= @sponsor.description %></td>
         </tr>
         <tr>
-            <td>Type</td>
+            <td class="columnLabel boldText">Type:</td>
             <td><%= @sponsor.spn_type %></td>
         </tr>
         <tr>
-            <td>Link to SEC</td>
+            <td class="columnLabel boldText">Link to SEC:</td>
             <td><%= @sponsor.link_to_sec %></td>
         </tr>
         <tr>
-            <td>Link to Sponsor</td>
+            <td class="columnLabel boldText">Link to Sponsor:</td>
             <td><%= @sponsor.link_to_sponsor %></td>
         </tr>
     </table>
+    <div class="divCenter">
+        <%= link_to("Back to list", sponsors_path, :class => "btn btn-warning btn-sm") %>
+    </div>
 </div>

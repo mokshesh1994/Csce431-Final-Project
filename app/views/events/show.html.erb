@@ -1,16 +1,18 @@
-<%= link_to("<< Back to list", events_path, :class => "back-link") %>
 
 <div>
     <h2>Show Event</h2>
     
-    <table>
+    <table class="tableCenter">
         <tr>
-            <td>Name</td>
+            <td class="columnLabel boldText">Name:</td>
             <td><%= @event.name %></td>
         </tr>
         <tr>
-            <td>Link to Event</td>
+            <td class="columnLabel boldText">Link to Event:</td>
             <td><%= @event.link_to_event %></td>
         </tr>
     </table>
+    <div class="divCenter">
+        <%= link_to("Back to list", events_path, :class => "btn btn-warning btn-sm") %>
+    </div>
 </div>

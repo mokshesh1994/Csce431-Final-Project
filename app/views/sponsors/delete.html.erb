@@ -1,27 +1,26 @@
-<%= link_to("<< Back to List", sponsors_path, :class => "back-link") %>
 
 <div>
     <h2>Delete Sponsor</h2>
     
     <%= form_for(@sponsor, :method => "delete") do |f| %>
-        <p>Are you sure you want to permanently delete this sponsor?</p>
-        <table>
+        <p class="divCenter">Are you sure you want to permanently delete this sponsor?</p>
+        <table class="tableCenter">
             <tr>
-                <td>Name</td>
+                <td class="columnLabel boldText">Name:</td>
                 <td><%= @sponsor.name %></td>
             </tr>
             <tr>
-                <td>Description</td>
+                <td class="columnLabel boldText">Description:</td>
                 <td><%= @sponsor.description %></td>
             </tr>
             <tr>
-                <td>Type</td>
+                <td class="columnLabel boldText">Type:</td>
                 <td><%= @sponsor.spn_type %></td>
             </tr>
         </table>
-        <div>
-            <%= f.submit("Delete Sponsor") %>
-            
+        <div class="divCenter">
+            <%= f.submit("Delete Sponsor", :class => "btn btn-danger btn-sm") %>
+            <%= link_to("Back to List", sponsors_path, :class => "btn btn-warning btn-sm") %>
         </div>
     <% end %>
 </div>
