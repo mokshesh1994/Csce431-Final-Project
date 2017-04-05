@@ -4,12 +4,14 @@
         <tr>
             <th>#</th>
             <th>Name</th>
+            <th>Image</th>
             <th></th>
         </tr>
         <% @committees.each do |committee| %>
         <tr>
             <td><%= committee.id %></td>
             <td><%= committee.name %></td>
+            <td style="text-align:center"><%= image_tag(committee.image, :class => "thumb_size") %></td>
             <td>
                 <%= link_to("Show", committee_path(committee.id), :class => "btn btn-primary btn-xs") %>
                 <%= link_to("Edit", edit_committee_path(committee.id), :class => "btn btn-primary btn-xs") %>

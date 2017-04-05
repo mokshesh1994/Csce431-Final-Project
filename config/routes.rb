@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  root 'access#login'
+  get 'parameters/index'
+
+  get 'parameters/show'
+
+  get 'parameters/new'
+
+  get 'parameters/edit'
+
+  get 'parameters/delete'
 
   get 'admin', :to => 'access#menu'
   get 'access/menu'
@@ -37,6 +47,12 @@ Rails.application.routes.draw do
   end
   
   resources :members do
+    member do
+      get :delete
+    end
+  end
+  
+  resources :parameters do
     member do
       get :delete
     end

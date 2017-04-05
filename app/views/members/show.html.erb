@@ -33,11 +33,11 @@
         </tr>
         <tr>
             <td class="columnLabel boldText">Position:</td>
-            <td><%= @member.position_id %></td>
+            <td><%= collection_select(:member, :position_id, Position.order(:name), :id, :name, {}, {:multiple => false, :disabled => "disabled"}) %></td></td>
         </tr>
         <tr>
             <td class="columnLabel boldText">Division:</td>
-            <td><%= @member.division_id %></td>
+            <td><%= collection_select(:member, :division_id, Division.order(:name), :id, :name, {}, {:multiple => false, :disabled => "disabled"}) %></td>
         </tr>
     </table>
     

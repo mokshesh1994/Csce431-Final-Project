@@ -38,11 +38,11 @@
             </tr>
             <tr>
                 <td class="columnLabel">Position</td>
-                <td><%= f.text_field(:position_id, size: 40) %></td>
+                <td><%= collection_select(:member, :position_id, Position.order(:name), :id, :name, {}, {:multiple => false}) %></td>
             </tr>
             <tr>
                 <td class="columnLabel">Division</td>
-                <td><%= f.text_field(:division_id, size: 40) %></td>
+                <td><%= collection_select(:member, :division_id, Division.order(:name), :id, :name, {}, {:multiple => false}) %></td>
             </tr>
         </table>
         

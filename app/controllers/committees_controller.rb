@@ -67,6 +67,6 @@ class CommitteesController < ApplicationController
   private
   
   def committee_params
-    params.require(:committee).permit(:name, :description)
+    params.require(:committee).permit(:name, :image, :description)
   end
 end

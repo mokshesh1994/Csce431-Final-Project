@@ -1,0 +1,311 @@
+
+<div>
+    <h2>Update Parameters</h2>
+    <%= form_for(@parameter) do |f| %>
+        <%= error_messages_for(f.object) %>
+        
+        <!-- ***************************************************************** -->
+        <!--                         Main Section                              -->
+        <!-- ***************************************************************** -->
+        <h3>Main Section</h3>
+        <table class="tableCenter">
+            <tr>
+                <td class="columnLabel">Main image 1</td>
+                <td><%= f.text_field(:main_image_1, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Main image 1 title</td>
+                <td><%= f.text_field(:main_image_1_title, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Main image 1 subtitle</td>
+                <td><%= f.text_field(:main_image_1_subtitle, size: 40) %></td>
+            </tr>
+            
+            <tr>
+                <td class="columnLabel">Main image 2</td>
+                <td><%= f.text_field(:main_image_2, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Main image 2 title</td>
+                <td><%= f.text_field(:main_image_2_title, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Main image 2 subtitle</td>
+                <td><%= f.text_field(:main_image_2_subtitle, size: 40) %></td>
+            </tr>
+            
+            <tr>
+                <td class="columnLabel">Main image 3</td>
+                <td><%= f.text_field(:main_image_3, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Main image 3 title</td>
+                <td><%= f.text_field(:main_image_3_title, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Main image 3 subtitle</td>
+                <td><%= f.text_field(:main_image_3_subtitle, size: 40) %></td>
+            </tr>
+            
+            <tr>
+                <td class="columnLabel">Main image 4</td>
+                <td><%= f.text_field(:main_image_4, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Main image 4 title</td>
+                <td><%= f.text_field(:main_image_4_title, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Main image 4 subtitle</td>
+                <td><%= f.text_field(:main_image_4_subtitle, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Main image 5</td>
+                <td><%= f.text_field(:main_image_5, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Main image 5 title</td>
+                <td><%= f.text_field(:main_image_5_title, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Main image 5 subtitle</td>
+                <td><%= f.text_field(:main_image_5_subtitle, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Main image 6</td>
+                <td><%= f.text_field(:main_image_6, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Main image 6 title</td>
+                <td><%= f.text_field(:main_image_6_title, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Main image 6 subtitle</td>
+                <td><%= f.text_field(:main_image_6_subtitle, size: 40) %></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        
+        <!-- ***************************************************************** -->
+        <!--                         About Section                             -->
+        <!-- ***************************************************************** -->
+        <h3>About Section</h3>
+        <table class="tableCenter">
+            <tr>
+                <td class="columnLabel">About title</td>
+                <td><%= f.text_field(:about_title, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">About description</td>
+                <td><%= f.text_area(:about_description, cols: 43, rows: 10) %></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        
+        <!-- ***************************************************************** -->
+        <!--                         Committees Section                        -->
+        <!-- ***************************************************************** -->
+        <h3>Committees Section</h3>
+        <table class="tableCenter">
+            <tr>
+                <td class="columnLabel">Committes title</td>
+                <td><%= f.text_field(:committees_title, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Committees description</td>
+                <td><%= f.text_area(:committees_description, cols: 43, rows: 10) %></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        
+        <!-- ***************************************************************** -->
+        <!--                         Sponsors Section                          -->
+        <!-- ***************************************************************** -->
+        <h3>Sponsors Section</h3>
+        <table class="tableCenter">
+            <tr>
+                <td class="columnLabel">Sponsors title</td>
+                <td><%= f.text_field(:sponsors_title, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Sponsors description</td>
+                <td><%= f.text_area(:sponsors_description, cols: 43, rows: 10) %></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        
+        <!-- ***************************************************************** -->
+        <!--                         Events Section                            -->
+        <!-- ***************************************************************** -->
+        <h3>Events Section</h3>
+        <table class="tableCenter">
+            <tr>
+                <td class="columnLabel">Events title</td>
+                <td><%= f.text_field(:events_title, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Events description</td>
+                <td><%= f.text_area(:events_description, cols: 43, rows: 10) %></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        
+        <!-- ***************************************************************** -->
+        <!--                         Members Section                           -->
+        <!-- ***************************************************************** -->
+        <h3>Members Section</h3>
+        <table class="tableCenter">
+            <tr>
+                <td class="columnLabel">Executive board title</td>
+                <td><%= f.text_field(:exboard_title, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Executive board description</td>
+                <td><%= f.text_area(:exboard_description, cols: 43, rows: 10) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Executive council title</td>
+                <td><%= f.text_field(:excouncil_title, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Executive council description</td>
+                <td><%= f.text_area(:excouncil_description, cols: 43, rows: 10) %></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        
+        <!-- ***************************************************************** -->
+        <!--                         Login Section                             -->
+        <!-- ***************************************************************** -->
+        <h3>Login Section</h3>
+        <table class="tableCenter">
+            <tr>
+                <td class="columnLabel">Login title</td>
+                <td><%= f.text_field(:login_title, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Members title</td>
+                <td><%= f.text_field(:members_title, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Members description</td>
+                <td><%= f.text_area(:members_description, cols: 43, rows: 10) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Members URL</td>
+                <td><%= f.text_field(:members_link, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Members footer</td>
+                <td><%= f.text_field(:members_footer, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Students title</td>
+                <td><%= f.text_field(:students_title, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Students description</td>
+                <td><%= f.text_area(:students_description, cols: 43, rows: 10) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Students URL</td>
+                <td><%= f.text_field(:students_link, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Students footer</td>
+                <td><%= f.text_field(:students_footer, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Companies title</td>
+                <td><%= f.text_field(:companies_title, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Companies description</td>
+                <td><%= f.text_area(:companies_description, cols: 43, rows: 10) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Companies URL</td>
+                <td><%= f.text_field(:companies_link, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Companies footer</td>
+                <td><%= f.text_field(:companies_footer, size: 40) %></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        
+        <!-- ***************************************************************** -->
+        <!--                         Contact Us Section                        -->
+        <!-- ***************************************************************** -->
+        <h3>Contact Us Section</h3>
+        <table class="tableCenter">
+            <tr>
+                <td class="columnLabel">Contact us title</td>
+                <td><%= f.text_field(:contactus_title, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Contact us header</td>
+                <td><%= f.text_field(:contactus_header, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Contact us address</td>
+                <td><%= f.text_field(:contactus_address, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Contact us phone</td>
+                <td><%= f.text_field(:contactus_phone, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Contact us URL</td>
+                <td><%= f.text_field(:contactus_url, size: 40) %></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+        
+        <!-- ***************************************************************** -->
+        <!--                         Calendar Section                          -->
+        <!-- ***************************************************************** -->
+        <h3>Calendar Section</h3>
+        <table class="tableCenter">
+            <tr>
+                <td class="columnLabel">Calendar title</td>
+                <td><%= f.text_field(:calendar_title, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Calendr description</td>
+                <td><%= f.text_area(:calendar_description, cols: 43, rows: 10) %></td>
+            </tr>
+        </table>
+        
+        <div class="divCenter">
+            <%= f.submit("Update Parameters", :class => "btn btn-success btn-sm") %>
+            <%= link_to("Back to List", parameters_path, :class => "btn btn-warning btn-sm") %>
+            <br /><br /><br />
+        </div>
+    <% end %>
+</div>

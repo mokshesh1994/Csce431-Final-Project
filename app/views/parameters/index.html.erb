@@ -1,0 +1,21 @@
+<div>
+    <h2>Parameters</h2>
+    <table class="table table-condensed table-bordered table-striped">
+        <tr>
+            <th>#</th>
+            <th>About title</th>
+            <th></th>
+        </tr>
+        <% @parameters.each do |parameter| %>
+        <tr>
+            <td><%= parameter.id %></td>
+            <td><%= parameter.about_title %></td>
+            <td>
+                <%= link_to("Show", parameter_path(parameter.id), :class => "btn btn-primary btn-xs") %>
+                <%= link_to("Edit", edit_parameter_path(parameter.id), :class => "btn btn-primary btn-xs") %>
+            </td>
+        </tr>
+        <% end %>
+    </table>
+    <%= link_to("Back to menu", access_menu_path, :class => "btn btn-sm btn-warning")%>
+</div>
