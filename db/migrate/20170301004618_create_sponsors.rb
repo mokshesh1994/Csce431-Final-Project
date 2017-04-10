@@ -5,7 +5,7 @@ class CreateSponsors < ActiveRecord::Migration
       t.string "name", :null => false, :limit => 40
       t.text "description"
       t.string "type", :null => false, :limit => 40
-      t.binary "logo"
+      t.attachment :image
       t.string "link_to_sec"
       t.string "link_to_sponsor"
       t.timestamps null: false
@@ -13,6 +13,7 @@ class CreateSponsors < ActiveRecord::Migration
   end
   
   def down
-    drop_table :sponsors
+    drop_table :sponsors 
+    remove_attachment :sponsors, :image
   end
 end

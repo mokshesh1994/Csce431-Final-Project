@@ -67,6 +67,6 @@ class SponsorsController < ApplicationController
   private
   
   def sponsor_params
-    params.require(:sponsor).permit(:name, :description, :spn_type, :link_to_sec, :link_to_sponsor)
+    params.require(:sponsor).permit(:name, :description, :spn_type, :link_to_sec, :link_to_sponsor, :image)
   end
 end

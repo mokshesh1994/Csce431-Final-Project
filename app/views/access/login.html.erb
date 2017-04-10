@@ -1,3 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SEC Portal</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+       <!--- Indicators -->
+       <ol class="carousel-indicators">
+           <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+           <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+           <li data-target="#carousel example-generic" data-slid-to="2"></li>
+       </ol>
+       
+       <!-- wrapper for slides -->
+       <div class="carousel-inner">
+           <div class="item active">
+               <img src="..." alt="...">
+           </div>
+           <div class="item">
+               <img src="..." alt="...">
+           </div>
+           <div class="item">
+               <img src="..." alt="...">
+           </div>
+       </div>
+       
+       <!-- controls -->
+       <a class="left carousel-control" href="carousel-example-generic" data-slide="prev">
+           <span class="glyphicon glyphicon-menu-left"></span>
+       </a>
+       <a class="right carousel-control" href="carousel-example-generic" data-slide="next">
+           <span class= "glyphicon glyphicon-menu-right"></span>
+       </a>
+   </div>
+ 
+ <!--Login Display------------------------------------------------------------------------------------------>
+   
+    <div class="container" style="padding-top:200px;">
+        <h3 class="text-center"  style="padding-left:75px;">Login</h3>
+        <form class="form-horizontal" action="/access/attempt_login" method="post">
+            <input name="authenticity_token" 
+            value="WMkDkdcsSsAPSggvbz8LNyIzMrvxkd/jFjGR9txu88e0POsN8NxMrBT1SHHsab8KuMky1GQqkaZsNmBY9EL6hA==" type="hidden">
+            <!--  -->
+            <div class="form-group">
+                <label class="contro-label col-sm-offset-3 col-sm-1" for="email">Email:</label>
+                <div class="col-sm-5">
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter email">
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label class="control-label col-sm-offset-3 col-sm-1" for="password">Password:</label>
+                <div class="col-sm-5">
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Enter password">
+                </div>
+            </div>
+            
+          <!--  <div class="form-group">
+                <div class="col-sm-offset-4 col-sm-10">
+                    <div class="checkbox">
+                        <label><input type="checkbox">Remember me</label>
+                    </div>
+                </div>
+            </div> -->
+            
+            <div class="form-group">
+                <div class="col-sm-offset-4 col-sm-5">
+                    <button  type="submit" name="commit" class="btn btn-primary btn-block" background-color:"#500000" >Log in</button>
+                </div>
+            </div>
+            
+        </form>
+    </div>
+    
+</body>    
+</html>
+
+<!--
 <div>
     <h2>Login</h2>
     <%= form_tag(access_attempt_login_path, :method => :post) do %>
@@ -17,3 +102,4 @@
         </table>
     <% end %>
 </div>
+-->

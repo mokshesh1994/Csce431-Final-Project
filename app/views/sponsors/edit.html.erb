@@ -1,7 +1,7 @@
 
 <div>
     <h2>Update Sponsor</h2>
-    <%= form_for(@sponsor) do |f| %>
+    <%= form_for @sponsor, html: {multipart: true } do |f| %>
         <%= error_messages_for(f.object) %>
         <table class="tableCenter">
             <tr>
@@ -23,6 +23,10 @@
             <tr>
                 <td class="columnLabel">Link to Sponsor</td>
                 <td><%= f.text_field(:link_to_sponsor, size: 40) %></td>
+            </tr>
+             <tr>
+                <td class="columnLabel">Logo</td>
+                <td><%= f.file_field :image %></td>
             </tr>
         </table>
         

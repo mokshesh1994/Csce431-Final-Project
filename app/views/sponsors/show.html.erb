@@ -3,6 +3,10 @@
     <h2>Show Sponsor</h2>
     <table class="tableCenter">
         <tr>
+              <td class="columnLabel boldText">Logo:</td>
+            <td><%=image_tag @sponsor.image.url(:small) %></td> 
+        </tr>   
+        <tr>
             <td class="columnLabel boldText">Name:</td>
             <td><%= @sponsor.name %></td>
         </tr>

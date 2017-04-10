@@ -1,6 +1,50 @@
-<div>
-    <%= flash[:notice] %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>SEC Portal</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head> 
+ 
+ 
+ <div id="sponsorsCarousel" class="carousel slide text-center" data-ride="carousel">
+        
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <p>
+                    <%= @sponsors[0].name %>
+                </p>
+            </div>
+            
+            <% @sponsors[1..@sponsors.size].each do |sponsor| %>
+                <div class="item">
+                    <p>
+                        <%= sponsor.name %>
+                    </p>
+                </div>
+            <% end %>
+            
+        </div>
+        
+        
+        <a class="left carousel-control" href="#sponsorsCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#sponsorsCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+
+    </div>
+    
+</div>
+ <!--   <div>
+<!-- Administrator Menu --------------->    
+<!--   <%= flash[:notice] %>
     <h2>Admin Menu</h2>
+    
     <table class="tableCenter">
         <tr>
             <td>
@@ -44,4 +88,5 @@
         </tr>
     </table>
 
-</div>
+</div> -->
+</hmtl>
