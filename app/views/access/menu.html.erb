@@ -7,42 +7,119 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-</head> 
- 
- 
- <div id="sponsorsCarousel" class="carousel slide text-center" data-ride="carousel">
-        
+</head>
+
+<div class="col-4"></div>
+<div id="sponsors" class="col-4">
+    <h2>
+        <b>
+            <font color="4A4A4A">
+                OUR
+            </font>
+            <font color="500000">
+                SPONSORS
+            </font>
+        </b>
+    </h2>
+    <hr></hr>
+<b>
+    <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">
+        The Student Engineers' Council is proud to extend the opportunity for all companies to become sponsors of our organization. Sponsors truly drive the success of our services and events, and in return, we will go out of our way to ensure our sponsors' visibility to engineering students.
+    </p>
+    
+    
+</b>    
+<body>
+    <div id="sponsorsCarousel" class="carousel slide text-center" data-ride="carousel">
+            
         <div class="carousel-inner" role="listbox">
             <div class="item active">
-                <p>
-                    <%= @sponsors[0].name %>
-                </p>
+                 <div> 
+                        <p>
+                            <%=image_tag @sponsors[0].image.url(:small)%>
+                        </p>
+                        
+                 </div>
+                
+                <div>
+                    <h3>
+                        <font color="500000">
+                            <b><%= @sponsors[0].name %></b>
+                        </font>
+                    </h3>
+                </div>
+                <div>
+                    <p>
+                        <font size="-1" color="000000">
+                            <%= @sponsors[0].spn_type %> Sponsor
+                        </font>
+                    </p>
+                </div>
+                <div>
+                    <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1"> <!-- this is TEMPORARY -->
+                        <%= @sponsors[0].description %>
+                    </p>
+                </div>
+                <div>
+                    <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1"> <!-- this is TEMPORARY -->
+                        <a href="<%= @sponsors[0].link_to_sponsor %>"><span class="glyphicon glyphicon-link"></span></a>
+                    </p>
+                </div>
             </div>
-            
+  <!-- Second sponsor -->          
             <% @sponsors[1..@sponsors.size].each do |sponsor| %>
                 <div class="item">
-                    <p>
-                        <%= sponsor.name %>
-                    </p>
+                     <div> 
+                        <p>
+                            <%=image_tag sponsor.image.url(:small)%>
+                        </p>
+                        
+                    </div>
+                    <div>
+                        <h3>
+                            <font color="500000">
+                                <b><%= sponsor.name %></b>
+                            </font>
+                        </h3>
+                    </div>
+                    <div>
+                        <p>
+                            <font size="-1" color="000000">
+                                <%= sponsor.spn_type %> Sponsor
+                            </font>
+                        </p>
+                    </div>
+                    <div>
+                        <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1"> <!-- this is TEMPORARY -->
+                            <%= sponsor.description %>
+                        </p>
+                    </div>
+                     
+                    <div>
+                        <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1"> <!-- this is TEMPORARY -->
+                            <a href="<%= sponsor.link_to_sponsor %>"><span class="glyphicon glyphicon-link"></span></a>
+                        </p>
+                    </div>
                 </div>
             <% end %>
             
         </div>
-        
-        
+            
+            
         <a class="left carousel-control" href="#sponsorsCarousel" data-slide="prev">
             <span class="glyphicon glyphicon-chevron-left"></span>
         </a>
         <a class="right carousel-control" href="#sponsorsCarousel" data-slide="next">
             <span class="glyphicon glyphicon-chevron-right"></span>
         </a>
-
-    </div>
     
+    </div>
+</body>
 </div>
- <!--   <div>
-<!-- Administrator Menu --------------->    
-<!--   <%= flash[:notice] %>
+
+<div>
+
+    <%= flash[:notice] %>
     <h2>Admin Menu</h2>
     
     <table class="tableCenter">
@@ -88,5 +165,6 @@
         </tr>
     </table>
 
-</div> -->
-</hmtl>
+</div>
+
+</html>
