@@ -33,41 +33,44 @@
     <div id="sponsorsCarousel" class="carousel slide text-center" data-ride="carousel">
             
         <div class="carousel-inner" role="listbox">
-            <div class="item active">
-                 <div> 
+        
+         <% @sponsors.each do |sponsor| %>
+               <% if sponsor == @sponsors[0] %>
+                
+                <div class="active">
+                     <div> 
                         <p>
-                            <%=image_tag @sponsors[0].image.url(:small)%>
+                            <%=image_tag sponsor.image.url(:small)%>
                         </p>
                         
-                 </div>
-                
-                <div>
-                    <h3>
-                        <font color="500000">
-                            <b><%= @sponsors[0].name %></b>
-                        </font>
-                    </h3>
+                    </div>
+                    <div>
+                        <h3>
+                            <font color="500000">
+                                <b><%= sponsor.name %></b>
+                            </font>
+                        </h3>
+                    </div>
+                    <div>
+                        <p>
+                            <font size="-1" color="000000">
+                                <%= sponsor.spn_type %> Sponsor
+                            </font>
+                        </p>
+                    </div>
+                    <div>
+                        <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1"> <!-- this is TEMPORARY -->
+                            <%= sponsor.description %>
+                        </p>
+                    </div>
+                     
+                    <div>
+                        <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1"> <!-- this is TEMPORARY -->
+                            <a href="<%= sponsor.link_to_sponsor %>"><span class="glyphicon glyphicon-link"></span></a>
+                        </p>
+                    </div>
                 </div>
-                <div>
-                    <p>
-                        <font size="-1" color="000000">
-                            <%= @sponsors[0].spn_type %> Sponsor
-                        </font>
-                    </p>
-                </div>
-                <div>
-                    <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1"> <!-- this is TEMPORARY -->
-                        <%= @sponsors[0].description %>
-                    </p>
-                </div>
-                <div>
-                    <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1"> <!-- this is TEMPORARY -->
-                        <a href="<%= @sponsors[0].link_to_sponsor %>"><span class="glyphicon glyphicon-link"></span></a>
-                    </p>
-                </div>
-            </div>
-  <!-- Second sponsor -->          
-            <% @sponsors[1..@sponsors.size].each do |sponsor| %>
+                <% else %>
                 <div class="item">
                      <div> 
                         <p>
@@ -101,7 +104,81 @@
                         </p>
                     </div>
                 </div>
+                <% end %>
             <% end %>
+        
+        
+        
+        <!--    <div class="item active">
+                 <div> 
+                        <p>
+                            <%=image_tag @sponsors[0].image.url(:small)%>
+                        </p>
+                        
+                 </div>
+                
+                <div>
+                    <h3>
+                        <font color="500000">
+                            <b><%= @sponsors[0].name %></b>
+                        </font>
+                    </h3>
+                </div>
+                <div>
+                    <p>
+                        <font size="-1" color="000000">
+                            <%= @sponsors[0].spn_type %> Sponsor
+                        </font>
+                    </p>
+                </div>
+                <div>
+                    <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1"> <!-- this is TEMPORARY 
+                        <%= @sponsors[0].description %>
+                    </p>
+                </div>
+                <div>
+                    <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1"> <!-- this is TEMPORARY 
+                        <a href="<%= @sponsors[0].link_to_sponsor %>"><span class="glyphicon glyphicon-link"></span></a>
+                    </p>
+                </div>
+            </div>
+  <!-- Second sponsor           
+            <% @sponsors[0..@sponsors.size].each do |sponsor| %>
+               
+                <div class="item">
+                     <div> 
+                        <p>
+                            <%=image_tag sponsor.image.url(:small)%>
+                        </p>
+                        
+                    </div>
+                    <div>
+                        <h3>
+                            <font color="500000">
+                                <b><%= sponsor.name %></b>
+                            </font>
+                        </h3>
+                    </div>
+                    <div>
+                        <p>
+                            <font size="-1" color="000000">
+                                <%= sponsor.spn_type %> Sponsor
+                            </font>
+                        </p>
+                    </div>
+                    <div>
+                        <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1"> <!-- this is TEMPORARY 
+                            <%= sponsor.description %>
+                        </p>
+                    </div>
+                     
+                    <div>
+                        <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1"> <!-- this is TEMPORARY 
+                            <a href="<%= sponsor.link_to_sponsor %>"><span class="glyphicon glyphicon-link"></span></a>
+                        </p>
+                    </div>
+                </div>
+            <% end %> -->
             
         </div>
             
