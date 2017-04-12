@@ -112,7 +112,7 @@
         <!--    <div class="item active">
                  <div> 
                         <p>
-                            <%=image_tag @sponsors[0].image.url(:small)%>
+                            <%=#image_tag #@sponsors[0].image.url(:small)%>
                         </p>
                         
                  </div>
@@ -120,25 +120,25 @@
                 <div>
                     <h3>
                         <font color="500000">
-                            <b><%= @sponsors[0].name %></b>
+                            <b><%= #@sponsors[0].name %></b>
                         </font>
                     </h3>
                 </div>
                 <div>
                     <p>
                         <font size="-1" color="000000">
-                            <%= @sponsors[0].spn_type %> Sponsor
+                            <%= #@sponsors[0].spn_type %> Sponsor
                         </font>
                     </p>
                 </div>
                 <div>
                     <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1"> <!-- this is TEMPORARY 
-                        <%= @sponsors[0].description %>
+                        <%= #@sponsors[0].description %>
                     </p>
                 </div>
                 <div>
                     <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1"> <!-- this is TEMPORARY 
-                        <a href="<%= @sponsors[0].link_to_sponsor %>"><span class="glyphicon glyphicon-link"></span></a>
+                        <a href="<%= #@sponsors[0].link_to_sponsor %>"><span class="glyphicon glyphicon-link"></span></a>
                     </p>
                 </div>
             </div>
