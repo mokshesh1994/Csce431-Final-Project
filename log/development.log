@@ -40453,3 +40453,187 @@ Processing by AccessController#menu as HTML
   [1m[35mSponsor Load (0.2ms)[0m  SELECT "sponsors".* FROM "sponsors"  ORDER BY "sponsors"."name" ASC
   Rendered access/menu.html.erb within layouts/admin (1.8ms)
 Completed 200 OK in 58ms (Views: 56.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 165.91.4.147 at 2017-04-17 20:58:55 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AccessController#login as HTML
+  [1m[35mMember Load (0.4ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["email", "administrator@administrator.com"]]
+  Rendered access/login.html.erb within layouts/admin (4.0ms)
+Completed 200 OK in 1031ms (Views: 979.2ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/access/attempt_login" for 165.91.4.147 at 2017-04-17 20:59:00 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"authenticity_token"=>"GWQmoQHRNW/AOEDmXmiSljKSdxSp9jfcdUv3pJdIwBogOsAXIfaFJRfN3ipguOv+ba2XC8TdGPKCIxuYOdZQfA==", "email"=>"administrator@administrator.com", "password"=>"[FILTERED]", "commit"=>""}
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["email", "administrator@administrator.com"]]
+Redirected to https://csce431-final-new-jonathanq.c9users.io/admin
+Completed 302 Found in 78ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 165.91.4.147 at 2017-04-17 20:59:00 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#menu as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mSponsor Load (0.3ms)[0m  SELECT "sponsors".* FROM "sponsors"  ORDER BY "sponsors"."name" ASC
+  Rendered access/menu.html.erb within layouts/admin (20.3ms)
+Completed 200 OK in 90ms (Views: 83.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin" for 165.91.4.147 at 2017-04-17 20:59:06 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#menu as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mSponsor Load (0.3ms)[0m  SELECT "sponsors".* FROM "sponsors"  ORDER BY "sponsors"."name" ASC
+  Rendered access/menu.html.erb within layouts/admin (2.8ms)
+Completed 200 OK in 204ms (Views: 200.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for 165.91.4.147 at 2017-04-17 20:59:07 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/admin" for 165.91.4.147 at 2017-04-17 20:59:08 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#menu as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mSponsor Load (0.4ms)[0m  SELECT "sponsors".* FROM "sponsors"  ORDER BY "sponsors"."name" ASC
+  Rendered access/menu.html.erb within layouts/admin (3.3ms)
+Completed 200 OK in 131ms (Views: 128.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin" for 165.91.4.147 at 2017-04-17 20:59:09 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#menu as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mSponsor Load (0.5ms)[0m  SELECT "sponsors".* FROM "sponsors"  ORDER BY "sponsors"."name" ASC
+  Rendered access/menu.html.erb within layouts/admin (3.0ms)
+Completed 200 OK in 246ms (Views: 243.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin" for 165.91.4.147 at 2017-04-17 20:59:11 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#menu as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mSponsor Load (0.3ms)[0m  SELECT "sponsors".* FROM "sponsors"  ORDER BY "sponsors"."name" ASC
+  Rendered access/menu.html.erb within layouts/admin (3.3ms)
+Completed 200 OK in 265ms (Views: 261.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin" for 165.91.4.147 at 2017-04-17 20:59:13 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#menu as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mSponsor Load (0.3ms)[0m  SELECT "sponsors".* FROM "sponsors"  ORDER BY "sponsors"."name" ASC
+  Rendered access/menu.html.erb within layouts/admin (2.2ms)
+Completed 200 OK in 90ms (Views: 87.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for 165.91.4.147 at 2017-04-17 20:59:13 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#menu as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mSponsor Load (0.3ms)[0m  SELECT "sponsors".* FROM "sponsors"  ORDER BY "sponsors"."name" ASC
+  Rendered access/menu.html.erb within layouts/admin (2.6ms)
+Completed 200 OK in 88ms (Views: 85.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 165.91.4.147 at 2017-04-17 20:59:14 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#menu as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mSponsor Load (0.2ms)[0m  SELECT "sponsors".* FROM "sponsors"  ORDER BY "sponsors"."name" ASC
+  Rendered access/menu.html.erb within layouts/admin (2.1ms)
+Completed 200 OK in 76ms (Views: 73.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin" for 165.91.4.147 at 2017-04-17 20:59:14 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#menu as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mSponsor Load (0.3ms)[0m  SELECT "sponsors".* FROM "sponsors"  ORDER BY "sponsors"."name" ASC
+  Rendered access/menu.html.erb within layouts/admin (2.4ms)
+Completed 200 OK in 81ms (Views: 79.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for 165.91.4.147 at 2017-04-17 20:59:15 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#menu as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mSponsor Load (0.3ms)[0m  SELECT "sponsors".* FROM "sponsors"  ORDER BY "sponsors"."name" ASC
+  Rendered access/menu.html.erb within layouts/admin (2.3ms)
+Completed 200 OK in 119ms (Views: 116.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for 165.91.4.147 at 2017-04-17 20:59:15 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#menu as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mSponsor Load (0.3ms)[0m  SELECT "sponsors".* FROM "sponsors"  ORDER BY "sponsors"."name" ASC
+  Rendered access/menu.html.erb within layouts/admin (2.6ms)
+Completed 200 OK in 87ms (Views: 85.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/admin" for 165.91.4.147 at 2017-04-17 20:59:15 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#menu as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mSponsor Load (0.3ms)[0m  SELECT "sponsors".* FROM "sponsors"  ORDER BY "sponsors"."name" ASC
+  Rendered access/menu.html.erb within layouts/admin (3.1ms)
+Completed 200 OK in 86ms (Views: 83.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin" for 165.91.4.147 at 2017-04-17 20:59:16 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#menu as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mSponsor Load (0.4ms)[0m  SELECT "sponsors".* FROM "sponsors"  ORDER BY "sponsors"."name" ASC
+  Rendered access/menu.html.erb within layouts/admin (2.7ms)
+Completed 200 OK in 68ms (Views: 66.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin" for 165.91.4.147 at 2017-04-17 20:59:17 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#menu as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mSponsor Load (0.3ms)[0m  SELECT "sponsors".* FROM "sponsors"  ORDER BY "sponsors"."name" ASC
+  Rendered access/menu.html.erb within layouts/admin (2.9ms)
+Completed 200 OK in 71ms (Views: 68.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin" for 165.91.4.147 at 2017-04-17 20:59:17 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#menu as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mSponsor Load (0.4ms)[0m  SELECT "sponsors".* FROM "sponsors"  ORDER BY "sponsors"."name" ASC
+  Rendered access/menu.html.erb within layouts/admin (3.1ms)
+Completed 200 OK in 84ms (Views: 82.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin" for 165.91.4.147 at 2017-04-17 20:59:24 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#menu as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mSponsor Load (0.2ms)[0m  SELECT "sponsors".* FROM "sponsors"  ORDER BY "sponsors"."name" ASC
+  Rendered access/menu.html.erb within layouts/admin (3.2ms)
+Completed 200 OK in 96ms (Views: 93.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sponsors" for 165.91.4.147 at 2017-04-17 20:59:35 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SponsorsController#index as HTML
+  [1m[36mSponsor Load (0.3ms)[0m  [1mSELECT "sponsors".* FROM "sponsors"  ORDER BY "sponsors"."name" ASC[0m
+  Rendered sponsors/index.html.erb within layouts/admin (2.6ms)
+Completed 200 OK in 73ms (Views: 71.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/access/menu" for 165.91.4.147 at 2017-04-17 20:59:38 +0000
+Cannot render console from 165.91.4.147! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#menu as HTML
+  [1m[35mMember Load (0.2ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["email", "administrator@administrator.com"]]
+  [1m[36mSponsor Load (0.2ms)[0m  [1mSELECT "sponsors".* FROM "sponsors"  ORDER BY "sponsors"."name" ASC[0m
+  Rendered access/menu.html.erb within layouts/admin (2.3ms)
+Completed 200 OK in 115ms (Views: 112.5ms | ActiveRecord: 0.5ms)
