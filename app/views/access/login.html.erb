@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="/d+N9gl9AT0qxWmS8hZLWW3YVyod7vP+mjV4jaNfE8lmGCt55xfAZ2tGrehESGUZMqWPXoAGlreweNA+eIbgJw==" />
 </head>
 <body>
 <!--
@@ -44,9 +46,9 @@
    
     <div class="container" style="padding-top:200px;">
         <h3 class="text-center"  style="padding-left:75px;">Login</h3>
-        <form class="form-horizontal" action="/access/attempt_login" method="post">
-            <input name="authenticity_token" 
-            value="WMkDkdcsSsAPSggvbz8LNyIzMrvxkd/jFjGR9txu88e0POsN8NxMrBT1SHHsab8KuMky1GQqkaZsNmBY9EL6hA==" type="hidden">
+        <form class="form-horizontal" action="/access/attempt_login" accept-charset="UTF-8" method="post">
+            <!--<input name="UTF-8" type="hidden" value="&#x2713;" />
+            <input  type ="hidden" name="authenticity_token" value="FxeyvGe3NYfaUqQ1yiArnErLRC9vXgSDSnxRAKPmciaM0BQzid303ZvRYE98fgXcFbacW/K2YcpgMfmzeD+ByA==" />
             <!--  -->
             <div class="form-group">
                 <label class="contro-label col-sm-offset-3 col-sm-1" for="email">Email:</label>

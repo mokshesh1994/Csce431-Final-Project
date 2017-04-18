@@ -19,6 +19,7 @@
        </ol>
        
        <!-- wrapper for slides -->
+       <!-- creating the active picture class by making the first sponsor in the database call -->
        <div class="carousel-inner">
            <div class="item active">
                <p class="col-sm-offset-5 col-sm-6">
@@ -35,16 +36,23 @@
                     </font>
                 </p>
            </div>
+           
+           <!-- creating the rest of the carousel for the rest of the items in the database --> 
            <% @sponsors[1..@sponsors.size].each do |sponsor| %>
            <div class="item">
                <p class="col-sm-offset-5 col-sm-6">
                    <img src=<%= sponsor.image.url(:small) %> alt="el Koala">
-               </p> 
+               </p>
+               
                 <h3 class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">
                     <font color="500000">
                         <b><%= sponsor.name %></b>
                     </font>
                 </h3>
+                
+                <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1"> <!-- description of sponsor -->
+                            <%= sponsor.description %>
+                </p>
            </div>
           
            <% end %>
