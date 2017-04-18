@@ -47,8 +47,8 @@
     <div class="container" style="padding-top:200px;">
         <h3 class="text-center"  style="padding-left:75px;">Login</h3>
         <form class="form-horizontal" action="/access/attempt_login" accept-charset="UTF-8" method="post">
-            <!--<input name="UTF-8" type="hidden" value="&#x2713;" />
-            <input  type ="hidden" name="authenticity_token" value="FxeyvGe3NYfaUqQ1yiArnErLRC9vXgSDSnxRAKPmciaM0BQzid303ZvRYE98fgXcFbacW/K2YcpgMfmzeD+ByA==" />
+            <input name="UTF-8" type="hidden" value="&#x2713;" />
+            <input  type ="hidden" name="authenticity_token" value = "<%= form_authenticity_token %>"  />
             <!--  -->
             <div class="form-group">
                 <label class="contro-label col-sm-offset-3 col-sm-1" for="email">Email:</label>

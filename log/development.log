@@ -42052,3 +42052,462 @@ Processing by AccessController#attempt_login as HTML
   [1m[35mCACHE (0.0ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["email", "administrator@administrator.com"]]
   Rendered access/login.html.erb within layouts/admin (0.9ms)
 Completed 200 OK in 159ms (Views: 81.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 165.91.12.206 at 2017-04-18 23:44:39 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AccessController#login as HTML
+  [1m[35mMember Load (0.4ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["email", "administrator@administrator.com"]]
+  Rendered access/login.html.erb within layouts/admin (3.9ms)
+Completed 200 OK in 642ms (Views: 588.4ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/access/attempt_login" for 165.91.12.206 at 2017-04-18 23:44:42 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"UTF-8"=>"✓", "authenticity_token"=>"IQYvNrjfVPs7Zh7y39kc8BbFh0ZqUxq3PyqSeD2A5q35DXyK6a/bMGVql6zLtFkjYQcIUtPyDRR0S72uIhTWhw==", "email"=>"administrator@administrator.com", "password"=>"[FILTERED]", "commit"=>""}
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["email", "administrator@administrator.com"]]
+Redirected to https://proyecto-a-la-ruby-3-cesarr15.c9users.io/admin
+Completed 302 Found in 122ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 165.91.12.206 at 2017-04-18 23:44:42 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#menu as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mSponsor Load (0.3ms)[0m  SELECT "sponsors".* FROM "sponsors"  ORDER BY "sponsors"."name" ASC
+  Rendered access/menu.html.erb within layouts/admin (23.1ms)
+Completed 200 OK in 107ms (Views: 95.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/access/logout" for 165.91.12.206 at 2017-04-18 23:44:44 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#logout as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+Redirected to https://proyecto-a-la-ruby-3-cesarr15.c9users.io/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/access/login" for 165.91.12.206 at 2017-04-18 23:44:44 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  [1m[35mMember Load (0.1ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["email", "administrator@administrator.com"]]
+  Rendered access/login.html.erb within layouts/admin (0.6ms)
+Completed 200 OK in 66ms (Views: 64.0ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/access/attempt_login" for 165.91.12.206 at 2017-04-18 23:44:45 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"UTF-8"=>"✓", "authenticity_token"=>"", "email"=>"administrator@administrator.com", "password"=>"[FILTERED]", "commit"=>""}
+  [1m[36mMember Load (0.1ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["email", "administrator@administrator.com"]]
+Redirected to https://proyecto-a-la-ruby-3-cesarr15.c9users.io/admin
+Completed 302 Found in 71ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 165.91.12.206 at 2017-04-18 23:44:45 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#menu as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mSponsor Load (0.2ms)[0m  SELECT "sponsors".* FROM "sponsors"  ORDER BY "sponsors"."name" ASC
+  Rendered access/menu.html.erb within layouts/admin (2.0ms)
+Completed 200 OK in 68ms (Views: 66.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/access/logout" for 165.91.12.206 at 2017-04-18 23:44:47 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#logout as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+Redirected to https://proyecto-a-la-ruby-3-cesarr15.c9users.io/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/access/login" for 165.91.12.206 at 2017-04-18 23:44:47 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  [1m[35mMember Load (0.2ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["email", "administrator@administrator.com"]]
+  Rendered access/login.html.erb within layouts/admin (0.8ms)
+Completed 200 OK in 73ms (Views: 71.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/access/attempt_login" for 165.91.12.206 at 2017-04-18 23:44:49 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"UTF-8"=>"✓", "authenticity_token"=>"", "email"=>"administrator@administrator.com", "password"=>"[FILTERED]", "commit"=>""}
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["email", "administrator@administrator.com"]]
+Redirected to https://proyecto-a-la-ruby-3-cesarr15.c9users.io/admin
+Completed 302 Found in 115ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin" for 165.91.12.206 at 2017-04-18 23:44:49 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#menu as HTML
+  [1m[36mMember Load (0.1ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mSponsor Load (0.2ms)[0m  SELECT "sponsors".* FROM "sponsors"  ORDER BY "sponsors"."name" ASC
+  Rendered access/menu.html.erb within layouts/admin (2.0ms)
+Completed 200 OK in 70ms (Views: 68.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/access/logout" for 165.91.12.206 at 2017-04-18 23:44:51 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#logout as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+Redirected to https://proyecto-a-la-ruby-3-cesarr15.c9users.io/access/login
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/access/login" for 165.91.12.206 at 2017-04-18 23:44:51 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  [1m[35mMember Load (64.5ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["email", "administrator@administrator.com"]]
+  Rendered access/login.html.erb within layouts/admin (1.0ms)
+Completed 200 OK in 166ms (Views: 99.6ms | ActiveRecord: 64.5ms)
+
+
+Started POST "/access/attempt_login" for 165.91.12.206 at 2017-04-18 23:45:09 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"UTF-8"=>"✓", "authenticity_token"=>"", "email"=>"administrator@administrator.com", "password"=>"[FILTERED]", "commit"=>""}
+Can't verify CSRF token authenticity
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  actionpack (4.2.5) lib/action_controller/metal/request_forgery_protection.rb:181:in `handle_unverified_request'
+  actionpack (4.2.5) lib/action_controller/metal/request_forgery_protection.rb:209:in `handle_unverified_request'
+  actionpack (4.2.5) lib/action_controller/metal/request_forgery_protection.rb:204:in `verify_authenticity_token'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:432:in `block in make_lambda'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:164:in `block in halting'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:504:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:504:in `each'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:504:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.5) lib/rack/etag.rb:24:in `call'
+  rack (1.6.5) lib/rack/conditionalget.rb:38:in `call'
+  rack (1.6.5) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.5) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:20:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.5) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.5) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.5) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.5) lib/rack/lock.rb:17:in `call'
+  rack (1.6.5) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.5) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /usr/local/rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (40.3ms)
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members"  ORDER BY "members"."id" DESC LIMIT 1[0m
+
+
+Started GET "/" for 165.91.12.206 at 2017-04-18 23:50:08 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AccessController#login as HTML
+  [1m[35mMember Load (0.5ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["email", "administrator@administrator.com"]]
+  Rendered access/login.html.erb within layouts/admin (60.9ms)
+Completed 500 Internal Server Error in 121ms (ActiveRecord: 1.4ms)
+
+ActionView::Template::Error (undefined local variable or method `form_authenticity_toke' for #<#<Class:0x00000004551ed8>:0x0000000454bbc8>
+Did you mean?  form_authenticity_token):
+    48:         <h3 class="text-center"  style="padding-left:75px;">Login</h3>
+    49:         <form class="form-horizontal" action="/access/attempt_login" accept-charset="UTF-8" method="post">
+    50:             <input name="UTF-8" type="hidden" value="&#x2713;" />
+    51:             <input  type ="hidden" name="authenticity_token" value = <%= form_authenticity_toke %>  />
+    52:             <!--  -->
+    53:             <div class="form-group">
+    54:                 <label class="contro-label col-sm-offset-3 col-sm-1" for="email">Email:</label>
+  app/views/access/login.html.erb:51:in `_app_views_access_login_html_erb___2320708329241375034_36099600'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (36.9ms)
+
+
+Started GET "/" for 165.91.12.206 at 2017-04-18 23:51:28 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  Rendered access/login.html.erb within layouts/admin (52.9ms)
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined local variable or method `form_authenticity_toke' for #<#<Class:0x00000004551ed8>:0x000000040ac360>
+Did you mean?  form_authenticity_token):
+    48:         <h3 class="text-center"  style="padding-left:75px;">Login</h3>
+    49:         <form class="form-horizontal" action="/access/attempt_login" accept-charset="UTF-8" method="post">
+    50:             <input name="UTF-8" type="hidden" value="&#x2713;" />
+    51:             <input  type ="hidden" name="authenticity_token" value = "<%= form_authenticity_toke %>"  />
+    52:             <!--  -->
+    53:             <div class="form-group">
+    54:                 <label class="contro-label col-sm-offset-3 col-sm-1" for="email">Email:</label>
+  app/views/access/login.html.erb:51:in `_app_views_access_login_html_erb___2320708329241375034_33895900'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (6.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.0ms)
+
+
+Started GET "/" for 165.91.12.206 at 2017-04-18 23:55:40 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  [1m[35mMember Load (0.2ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["email", "administrator@administrator.com"]]
+  Rendered access/login.html.erb within layouts/admin (2.8ms)
+Completed 200 OK in 654ms (Views: 651.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/access.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.12.206 at 2017-04-18 23:55:41 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/admin.self-d87509f4f41245477964384d0ad6cb73512e46a14dbbc81259c17d6d5ba0920d.css?body=1" for 165.91.12.206 at 2017-04-18 23:55:41 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/members.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.12.206 at 2017-04-18 23:55:41 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/divisions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.12.206 at 2017-04-18 23:55:41 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/committees.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.12.206 at 2017-04-18 23:55:41 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.12.206 at 2017-04-18 23:55:41 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/parameters.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.12.206 at 2017-04-18 23:55:41 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/positions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.12.206 at 2017-04-18 23:55:41 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/alert.self-742145c5bb847aafdadc6e339be795628f8bc25f177e851f03a8c42278eb0312.js?body=1" for 165.91.12.206 at 2017-04-18 23:55:41 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 165.91.12.206 at 2017-04-18 23:55:41 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3d2b1085db6945c1ed2965f6b9561bfd4c3d4bfd17596a955c1ce8b4068f6b3f.css?body=1" for 165.91.12.206 at 2017-04-18 23:55:41 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/transition.self-6ad2488465135ab731a045a8ebbe3ea2fc501aed286042496eda1664fdd07ba9.js?body=1" for 165.91.12.206 at 2017-04-18 23:55:41 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sponsors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 165.91.12.206 at 2017-04-18 23:55:41 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/button.self-126ac9bf0e7f2d8568f8da3a00fd5f0fac6eae0946331003370161fbf8d7975e.js?body=1" for 165.91.12.206 at 2017-04-18 23:55:42 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/dropdown.self-561cca1cbaf67474e01e9536f106bad541594860a6df997004591c1c1957a147.js?body=1" for 165.91.12.206 at 2017-04-18 23:55:42 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/modal.self-3e78617ade5663314b7ee0ea10375a5b34d59ffbade44939e3f2a4e4ef2019b3.js?body=1" for 165.91.12.206 at 2017-04-18 23:55:42 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tab.self-5bf7078b682f8b131332eefa46b45fa5eff2eca745fc0d03e2991450888f7c28.js?body=1" for 165.91.12.206 at 2017-04-18 23:55:42 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/carousel.self-e47323f363ceb3dc0bdbce05e36e709ed428e339833a41140a85cb0af24b8127.js?body=1" for 165.91.12.206 at 2017-04-18 23:55:42 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/collapse.self-2eb697f62b587bb786ff940d82dd4be88cdeeaf13ca128e3da3850c5fcaec301.js?body=1" for 165.91.12.206 at 2017-04-18 23:55:42 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/popover.self-0aa93860b59fe7393f1dd490f54b3cb994f9d6155adffce034d4e14ae361b041.js?body=1" for 165.91.12.206 at 2017-04-18 23:55:43 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/affix.self-6d6f1a7fc5c8aabf3547fa1b794fab6268f54bc55ad815e55873c71f52513517.js?body=1" for 165.91.12.206 at 2017-04-18 23:55:43 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap-sprockets.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 165.91.12.206 at 2017-04-18 23:55:43 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 165.91.12.206 at 2017-04-18 23:55:43 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/tooltip.self-05afb177e08f98997ccfc84fa08a215e4b27d48d5fe4d049080675e9dffd8199.js?body=1" for 165.91.12.206 at 2017-04-18 23:55:43 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/bootstrap/scrollspy.self-969f3c5f48cdf1e439c7fa1154c13b948715f5c689f87837c0b64521d3b46ef6.js?body=1" for 165.91.12.206 at 2017-04-18 23:55:43 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/access.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.206 at 2017-04-18 23:55:43 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 165.91.12.206 at 2017-04-18 23:55:43 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/committees.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.206 at 2017-04-18 23:55:43 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/divisions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.206 at 2017-04-18 23:55:43 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.206 at 2017-04-18 23:55:43 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/members.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.206 at 2017-04-18 23:55:43 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/parameters.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.206 at 2017-04-18 23:55:43 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/positions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.206 at 2017-04-18 23:55:43 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/sponsors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 165.91.12.206 at 2017-04-18 23:55:43 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 165.91.12.206 at 2017-04-18 23:55:43 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/access/attempt_login" for 165.91.12.206 at 2017-04-18 23:55:45 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"UTF-8"=>"✓", "authenticity_token"=>"ROhCgRIV/GbRtDDuEMn5no8mHoGa7Zhv8sM3Eoy+jFic4xE9Q2VzrY+4ubAEpLxN+OSRlSNMj8y5ohjEkyq8cg==", "email"=>"administrator@administrator.com", "password"=>"[FILTERED]", "commit"=>""}
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["email", "administrator@administrator.com"]]
+Redirected to https://proyecto-a-la-ruby-3-cesarr15.c9users.io/admin
+Completed 302 Found in 164ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 165.91.12.206 at 2017-04-18 23:55:45 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#menu as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mSponsor Load (0.7ms)[0m  SELECT "sponsors".* FROM "sponsors"  ORDER BY "sponsors"."name" ASC
+  Rendered access/menu.html.erb within layouts/admin (69.0ms)
+Completed 200 OK in 248ms (Views: 231.7ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/access/logout" for 165.91.12.206 at 2017-04-18 23:55:47 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#logout as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+Redirected to https://proyecto-a-la-ruby-3-cesarr15.c9users.io/access/login
+Completed 302 Found in 8ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/access/login" for 165.91.12.206 at 2017-04-18 23:55:47 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#login as HTML
+  [1m[35mMember Load (0.3ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["email", "administrator@administrator.com"]]
+  Rendered access/login.html.erb within layouts/admin (5.0ms)
+Completed 200 OK in 122ms (Views: 117.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/access/attempt_login" for 165.91.12.206 at 2017-04-18 23:55:49 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#attempt_login as HTML
+  Parameters: {"UTF-8"=>"✓", "authenticity_token"=>"z5op0JyxAiFSAC8Y5wU6Ydx03lFQTjNE4UYQuZhnHjAXkXpszcGN6gwMpkbzaH+yq7ZRRenvJOeqJz9vh/MuGg==", "email"=>"administrator@administrator.com", "password"=>"[FILTERED]", "commit"=>""}
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1  [["email", "administrator@administrator.com"]]
+Redirected to https://proyecto-a-la-ruby-3-cesarr15.c9users.io/admin
+Completed 302 Found in 85ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin" for 165.91.12.206 at 2017-04-18 23:55:49 +0000
+Cannot render console from 165.91.12.206! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AccessController#menu as HTML
+  [1m[36mMember Load (0.2ms)[0m  [1mSELECT  "members".* FROM "members" WHERE "members"."email" = ?  ORDER BY "members"."id" ASC LIMIT 1[0m  [["email", "administrator@administrator.com"]]
+  [1m[35mSponsor Load (0.3ms)[0m  SELECT "sponsors".* FROM "sponsors"  ORDER BY "sponsors"."name" ASC
+  Rendered access/menu.html.erb within layouts/admin (2.7ms)
+Completed 200 OK in 98ms (Views: 95.4ms | ActiveRecord: 0.6ms)
