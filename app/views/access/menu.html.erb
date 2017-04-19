@@ -9,106 +9,272 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-
-   <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-      <!--- Indicators
-       <ol class="carousel-indicators">
-           <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-           <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-           <li data-target="#carousel example-generic" data-slid-to="2"></li>
-       </ol>
-       
-       <!-- wrapper for slides -->
-       <div class="carousel-inner">
-           <div class="item active">
-               <p class="col-sm-offset-5 col-sm-6">
-               <img src=<%= @sponsors[0].image.url(:small) %>, class="image-rounded" alt="active image">
-               </p>
-               <h3 class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">
-                    <font color="500000">
-                        <b><%= @sponsors[0].name %></b>
-                    </font>
-                </h3>
-                <p class="col-sm-offset-5 col-sm-2">
-                    <font size="-1" color="000000">
-                        <%= @sponsors[0].spn_type %> Sponsor
-                    </font>
-                </p>
-           </div>
-           <% @sponsors[1..@sponsors.size].each do |sponsor| %>
-           <div class="item">
-               <p class="col-sm-offset-5 col-sm-6">
-                   <img src=<%= sponsor.image.url(:small) %> alt="el Koala">
-               </p> 
-                <h3 class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">
-                    <font color="500000">
-                        <b><%= sponsor.name %></b>
-                    </font>
-                </h3>
-           </div>
-          
-           <% end %>
-       </div>
-       
-       <!-- controls -->
-       <a class="left carousel-control" href="#sponsorsCarousel" data-slide="prev">
-           <span class="glyphicon glyphicon-menu-left"></span>
-       </a>
-       <a class="right carousel-control" href="#sponsorsCarousel" data-slide="next">
-           <span class= "glyphicon glyphicon-menu-right"></span>
-       </a>
-   </div> 
-
-<div> 
-</body>
-<body>
-    <%= flash[:notice] %>
-    <h2>Admin Menu</h2>
+    <!--
+    //////////////NAV BAR///////////////////////////////////////////////////////////////
+    -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#top">SEC</a>
+            </div>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#committees">Committees</a></li>
+                <li><a href="#sponsors">Sponsors</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#divisions">Executive Board</a></li>
+                <li><a href="#executive council">Executive Council</a></li>
+            </ul>
+        </div>
+    </nav>
     
-    <table class="tableCenter">
-        <tr>
-            <td>
-                <%= link_to("Manage Committees", committees_path) %>    
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <%= link_to("Manage Divisions", divisions_path) %>    
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <%= link_to("Manage Events", events_path) %>    
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <%= link_to("Manage Positions", positions_path) %>  
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <%= link_to("Manage Sponsors", sponsors_path) %>  
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <%= link_to("Manage Members", members_path) %>   
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <%= link_to("Parameters", parameters_path) %>   
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <%= link_to("Logout", access_logout_path) %>   
-            </td>
-        </tr>
-    </table>
+    <h1>
+            TOP<br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/> 
+    </h1>
+    
+    <!-- 
+    //////////////COMMITTES SECTION//////////////////////////////////
+    -->
+    <section id= "committees">
+        <h1>OUR COMMITTEES</h1>
+        <div>
+            <table class="table table-condensed table-bordered table-striped">
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Image</th>
+                <th></th>
+            </tr>
+            <% @committees.each do |committee| %>
+            <tr>
+                <td><%= committee.id %></td>
+                <td><%= committee.name %></td>
+                <td style="text-align:center"><%= image_tag(committee.image, :class => "thumb_size") %></td>
+                <td>
+                    <%= link_to("Show", committee_path(committee.id), :class => "btn btn-primary btn-xs") %>
+                    <%= link_to("Edit", edit_committee_path(committee.id), :class => "btn btn-primary btn-xs") %>
+                    <%= link_to("Delete", delete_committee_path(committee.id), :class => "btn btn-danger btn-xs") %>
+                </td>
+            </tr>
+            <% end %>
+        </table>
+            
+            
+        </div>
+    </section>
+    
+    <!--
+    /////////////////SPONSORS////////////////////////////////////////////////////////////////////////
+    -->
+    <section id= "sponsors">
+        <h1>OUR SPONSORS</h1>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!--- Indicators
+           <ol class="carousel-indicators">
+               <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+               <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+               <li data-target="#carousel example-generic" data-slid-to="2"></li>
+           </ol>
+           
+           <!-- wrapper for slides -->
+           <div class="carousel-inner">
+               <div class="item active">
+                   <p class="col-sm-offset-5 col-sm-6">
+                   <img src=<%= @sponsors[0].image.url(:small) %>, class="image-rounded" alt="active image">
+                   </p>
+                   <h3 class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">
+                        <font color="500000">
+                            <b><%= @sponsors[0].name %></b>
+                        </font>
+                    </h3>
+                    <p class="col-sm-offset-5 col-sm-2">
+                        <font size="-1" color="000000">
+                            <%= @sponsors[0].spn_type %> Sponsor
+                        </font>
+                    </p>
+               </div>
+               <% @sponsors[1..@sponsors.size].each do |sponsor| %>
+               <div class="item">
+                   <p class="col-sm-offset-5 col-sm-6">
+                       <img src=<%= sponsor.image.url(:small) %> alt="el Koala">
+                   </p> 
+                    <h3 class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">
+                        <font color="500000">
+                            <b><%= sponsor.name %></b>
+                        </font>
+                    </h3>
+               </div>
+              
+               <% end %>
+           </div>
+           
+           <!-- controls -->
+           <a class="left carousel-control" href="#sponsorsCarousel" data-slide="prev">
+               <span class="glyphicon glyphicon-menu-left"></span>
+           </a>
+           <a class="right carousel-control" href="#sponsorsCarousel" data-slide="next">
+               <span class= "glyphicon glyphicon-menu-right"></span>
+           </a>
+       </div> 
+    
+    
+    </section>
+    
+    <!-- 
+    ///////////////////EVENTS///////////////////////////////////////
+    -->
+    <section id= "events">
+        <h1>OUR EVENTS</h1>
+        <table class="table table-condensed table-striped table-bordered">
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Link</th>
+                <th></th>
+            </tr>
+            <% @events.each do |event| %>
+            <tr>
+                <td><%= event.id %></td>
+                <td><%= event.name %></td>
+                <td><%= event.link_to_event %></td>
+                <td>
+                    <%= link_to("Show", event_path(event.id), :class => "btn btn-primary btn-xs") %>
+                    <%= link_to("Edit", edit_event_path(event.id), :class => "btn btn-primary btn-xs") %>
+                    <%= link_to("Delete", delete_event_path(event.id), :class => "btn btn-danger btn-xs") %>
+                </td>
+            </tr>
+            <% end %>
+        </table>
+    </section>
+    
+    <!--
+    /////////////////DIVISIONS///////////////////////////////////////////////
+    -->
+    <section id= "divisions">
+        <h1>EXECUTIVE BOARD</h1>
+        <table class="table table-condensed table-striped table-bordered">
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th></th>
+            </tr>
+            <% @divisions.each do |division| %>
+            <tr>
+                <td><%= division.id %></td>
+                <td><%= division.name %></td>
+                <td><%= division.description %></td>
+                <td>
+                    <%= link_to("Show", division_path(division.id), :class => "btn btn-primary btn-xs") %>
+                    <%= link_to("Edit", edit_division_path(division.id), :class => "btn btn-primary btn-xs") %>
+                    <%= link_to("Delete", delete_division_path(division.id), :class => "btn btn-danger btn-xs") %>
+                </td>
+            </tr>
+            <% end %>
+        </table>
+    </section>
+    <!--
+    /////////////////EXECUTIVE COUNCIL (Positions)///////////////////////////
+    -->
+    <section id= "executive council">
+        <h1>EXECUTIVE COUNCIL</h1>
+        <table class="table table-condensed table-striped table-bordered">
+            <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th></th>
+            </tr>
+            <% @positions.each do |position| %>
+            <tr>
+                <td><%= position.id %></td>
+                <td><%= position.name %></td>
+                <td><%= position.pos_type %></td>
+                <td>
+                    <%= link_to("Show", position_path(position.id), :class => "btn btn-primary btn-xs") %>
+                    <%= link_to("Edit", edit_position_path(position.id), :class => "btn btn-primary btn-xs") %>
+                    <%= link_to("Delete", delete_position_path(position.id), :class => "btn btn-danger btn-xs") %>
+                </td>
+            </tr>
+            <% end %>
+        </table>
+    </section>
 
-</div>
+</body>
+
+
+<body>
+    <div> 
+        <%= flash[:notice] %>
+        <h2>Admin Menu</h2>
+        
+        <table class="tableCenter">
+            <tr>
+                <td>
+                    <%= link_to("Manage Committees", committees_path) %>    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <%= link_to("Manage Divisions", divisions_path) %>    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <%= link_to("Manage Events", events_path) %>    
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <%= link_to("Manage Positions", positions_path) %>  
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <%= link_to("Manage Sponsors", sponsors_path) %>  
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <%= link_to("Manage Members", members_path) %>   
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <%= link_to("Parameters", parameters_path) %>   
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <%= link_to("Logout", access_logout_path) %>   
+                </td>
+            </tr>
+        </table>
+        <h1>
+            sd<br/>
+            sdf<br/>
+            sdfs<br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/> 
+            dgfgs
+        </h1>
+    
+    </div>
 
 </body>
 </html>

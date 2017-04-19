@@ -9,7 +9,11 @@ class AccessController < ApplicationController
   # Display menu items.
   # ***********************************************************************
   def menu
-   @sponsors = Sponsor.order(:name)
+    @committees = Committee.order(:name)
+    @sponsors = Sponsor.order(:name)
+    @events = Event.order(:name)
+    @divisions = Division.order(:name)
+    @positions = Position.order(:name)
   end
 
   # ***********************************************************************
