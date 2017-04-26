@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   root 'access#index'
+  
   get 'parameters/index'
 
   get 'parameters/show'
