@@ -1,0 +1,17 @@
+/*
+This stylesheet for all datasheets, invoices, and formatted tables of any kind.
+*/
+
+/* DataSheet Styles */
+table.datasheet { border-collapse: collapse; padding: 2px; margin: 0; border: 1px solid black; table-layout: auto;}
+table.datasheet tr { }
+table.datasheet td { font-size: 10px; line-height: 12px; border: 1px solid #666666; padding: 1px 2px; }
+table.datasheet tr.header { background-color: #1d476d; }
+table.datasheet tr.header td { color: #ffffff; font-weight: bold; padding: 4px 2px; border: 1px solid #cccccc; }
+table.datasheet td.totals { background-color: #cfcfcf; font-weight: bold; }
+td.center { text-align: center; }
+td.red { color: #cc0000; }
+td.green { color: #339933; }
+/* End DataSheet Styles */
+
+ol { list-style-type: decimal; }

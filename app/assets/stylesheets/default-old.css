@@ -1,0 +1,488 @@
+body {
+	background-color: #FFFFFF;
+	margin: 0;
+	padding: 0;
+	font: 11px/14px arial,verdana,sans-serif;
+	text-align: center;
+}
+a {
+	color: #800000;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+	/*border-bottom: 1px dotted #800000; Maybe some other time.*/
+}
+h1,h2,h3,h4,h5 {
+	line-height: 1.5em;
+}
+li {
+	text-align: left;
+}
+.notifyGreen 
+{
+     padding: 5px;
+     border: 1px solid #9F3;
+     background-color: #CF9;
+     color: #360;
+}
+
+.maroonbg { background-color: #800000; margin: 0px 0px 0px 0px }
+table { background-color: #FFFFFF; }
+td.main { width: 70%; }
+.banner { background-color: #800000; }
+img { border: 0; }
+a.imgLink { border: 0; }
+.sub { font-size: 8pt; }
+.header { font-weight: bold; font-size: 11pt; line-height: 13pt; }
+.title { font-weight: bold; font-size: 15pt; line-height: 17pt; }
+.normal { font-size: 11px; line-height: 14px; }
+.common { font-size: 9pt; line-height: 11pt; }
+.menuheader { font-weight: bold; font-size: 8pt; }
+.menudisplay { font-size: 8pt; text-align: justify; }
+.medium { font-size: 8pt; }
+.medium-shaded1 { background-color: #ffffcc; font-size: 8pt; }
+.medium-shaded2 { background-color: #e2dffa; font-size: 8pt; }
+.small { font-size: 12px; }
+.button {
+	border-right: #780000 1px solid;
+	border-top: #880000 1px solid;
+	font-weight: bold;
+	font-size: 9pt;
+	border-left: #900000 1px solid;
+	color: white;
+	border-bottom: maroon 1px solid;
+	background-color: maroon;
+	margin-bottom: 1px;
+}
+.D11 {
+        POSITION:absolute;
+        VISIBILITY:hidden;
+        Z-INDEX:200;
+}
+
+
+.rtColHdr { padding-top: 20px; font-weight: bold; font-size: 13px; }
+
+/**************************************/
+/* Calendar Styles */
+#calendar { text-align: center; height: 140px; }
+table.calTbl { margin: 0 auto; width: 160px; border: 1px solid #666666; padding: 1px; }
+tr.calTitle { color: #ffffff; background-color: maroon; }
+tr.calTitle td.rt { width: 20px; height: 15px; text-align: right; vertical-align: middle; }
+tr.calTitle td.ct { text-align: center; font: bold 11px verdana,arial,sans-serif; }
+tr.calTitle td.lt { width: 20px; height: 15px; text-align: left; vertical-align: middle; }
+tr.calendarRow { background-color: #ffffff; }
+tr.calendarRow td { 
+	font: 11px Verdana,arial,sans-serif;
+	color: black;
+	background-color: transparent;
+	text-align: center;
+	width: 20px;
+	height: 15px;
+	vertical-align: bottom; 
+}
+td.DayNoEvent {  }
+td.DayEvent {
+    background-color: #1d476d;
+    color: #fff;
+}
+a.DayEvent {
+	color: #fff;
+	background-color: #1d476d;
+	font-weight: bold;
+	z-index: 100;
+}
+tr.calendarRow td.DayDifferentMonth {
+	color: #999999;
+	font-size: 10px;
+}
+tr.calHdrRow td {
+	font-size: 12px;
+	font-weight: bold;
+	color: black;
+	border-bottom: gray 1px solid;
+	background-color: #dcdcdc;
+	text-align: center;
+	height: 15px;
+	vertical-align: middle;
+	width: 20px;
+}
+.calEventBox {
+	z-index: 10000;
+	width:0px;
+	height:0px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color: #808080;
+	display:none;
+	margin: 0;
+	padding: 0;
+}
+.popupEventDiv { text-align: left; font: 11px/13px Verdana,Tahoma,Arial,sans-serif; color: #333; margin: 0; padding: 5px; z-index: 10001; }
+.popupEventDiv h3 { font-size: 25px/27px; font-weight: bold; color: #800; margin: 0 0 3px 0; padding: 0 0 2px 0; border-bottom: 1px solid #000; z-index: 10002; }
+.popupEventDiv h5 { font-size: 10px; font-weight: bold; color: #000; margin: 3px 0 0 0; padding: 0; z-index: 10003; }
+.popupEventDiv p { margin: 0 0 0 0; padding: 0 0 0 0; z-index: 10004; }
+.popupEventDiv p.desc { margin: 0; padding: 3px; text-align: justify; border-right:1px solid #666; border-left:1px solid #666; background-color: #808080; z-index: 10005; }
+/* End Calendar Styles */
+/**************************************/
+
+
+.field {
+        FONT: 8pt arial, sans-serif;
+}
+.stylized {
+        FONT-WEIGHT: bolder;
+        FONT: 16pt Verdana, Arial;
+}
+UL.tight {
+        MARGIN-TOP: -0.1em
+}
+HR {
+        COLOR: maroon
+}
+.accentcolor {
+        COLOR: #DCDCDC
+}
+.shadedrow {
+        BACKGROUND-COLOR: #DCDCDC
+}
+.titlei {
+        FONT-WEIGHT: bold;
+        FONT-SIZE: 15pt;
+        FONT-STYLE: italic;
+        FONT-FAMILY: arial, sans-serif;;
+}
+.accentsmall {
+        FONT-SIZE: 7pt;
+        COLOR: #666666
+}
+.NewsHeadline {
+        FONT-WEIGHT: bolder;
+        FONT-SIZE: medium;
+        COLOR: maroon
+}
+
+#footer {
+	clear: both;
+	float: none;
+	background-color: maroon;
+	font: 8pt Verdana,Helvetica,Arial,sans-serif;
+	line-height: 10pt;
+	text-align: center;
+	color:white;
+	padding: 5px 0px 20px 0px;
+	margin: 0px 0px 0px 0px;
+}
+
+#footer a { padding-left: 10px; color: #fff; }
+
+/**************************************/
+/* Custom Error Page Styles */
+#main
+{
+    font: 12pt Arial,sans-serif;
+    text-align: center;
+    width: 750px;
+    min-height: 550px;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 5px black;
+}
+/* End Custom Error Page Styles */
+/**************************************/
+
+/**************************************/
+/* DataSheet Styles */
+table.datasheet, #contactsTable table { border-collapse: collapse; padding: 0; margin: 0; border: 1px solid black; table-layout: auto;}
+#contactsTable table { width: 100%; }
+table.datasheet tr {  }
+table.datasheet td { font: 10px/12px Arial,sans-serif; border: 1px solid #666666; padding: 1px 2px; }
+#contactsTable td { border: 0; border-top: 1px solid #333; }
+table.datasheet tr.header, #contactsTable tr.head { background-color: #1d476d; }
+table.datasheet tr.header td, #contactsTable tr.head td { color: #ffffff; font-weight: bold; padding: 4px 2px; border: 1px solid #cccccc; }
+table.datasheet td.totals { background-color: #cfcfcf; font-weight: bold; }
+td.red { color: #cc0000; }
+td.green { color: #339933; }
+.left { text-align: left; }
+/* End DataSheet Styles */
+/**************************************/
+
+
+/**************************************/
+/* Points Styles */
+table.ptsTbl {
+	font: 10px/12px Arial,sans-serif; 
+	margin: 0 10px 10px 10px; 
+	text-align:center; 
+	margin: 0 auto 15px auto;
+}
+
+table.ptsTbl tr {  }
+
+table.ptsTbl tr td { 
+	padding: 2px 3px; 
+}
+
+tr.ptsTblCatHdr { 
+	text-align: center; 
+	background-color: #1d476d; 
+	color: #ffffff; 
+}
+
+tr.ptsTblCatHdr td { 
+	padding: 2px 3px; 
+	height: 2em; 
+	vertical-align: middle;
+	border-style: solid;
+	border-width: 1px 1px 1px 1px;
+	border-color: #666666;
+	font-size: 1.4em;
+	font-weight: bold;
+}
+
+tr.ptsTblCatHdr td a {
+	color: #ffffff;
+}
+
+tr.ptsTblEventHdr { 
+	text-align: center; 
+	background-color: #0d375d; 
+	color: #ffffff;  
+}
+
+tr.ptsTblEventHdr td { 
+	padding: 2px 3px; 
+	height: 2em; 
+	vertical-align: bottom;
+	border: 1px solid #666666;
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+tr.ptsItem td { 
+	text-align: center; 
+	vertical-align: middle; 
+	border: 1px solid #666666;
+}
+
+tr.ptsItem td a {  }
+
+tr.ptsA { 
+	color: #000000; 
+	background-color: #ffffff; 
+}
+
+tr.ptsB { 
+	color: #000000; 
+	background-color: #cfcfcf; 
+}
+
+/* End Points Styles */
+/**************************************/
+
+
+/**************************************/
+/* BEGIN:: Work Request System Styles */
+
+
+table.wrTable { width: 99%; font: 12px/14px Arial,sans-serif; margin: 0 10px 10px 10px;}
+tr.wrTblHdr { background-color: #1d476d;}
+tr.wrTblHdr a { color: #ffffff; }
+tr.wrTblHdr td { font-size: 14px; color: #ffffff; text-align: left; padding: 0 3px 5px 2px; height: 2em; vertical-align: bottom; }
+tr.wrEntryRowA { font: 13px Arial,sans-serif; font-weight: bold; background-color: #ffffff;  text-align: left; padding: 0 4px 0 3px; }
+tr.wrEntryRowB { font: 13px Arial,sans-serif; font-weight: bold; background-color: #cfcfcf;  text-align: left; padding: 0 4px 0 3px; }
+tr.wrEntryRowAStatus { font: 12px Arial,sans-serif; background-color: #ffffff; text-align: left; border-bottom: 1pm solid #999999; text-indent: .75in; }
+tr.wrEntryRowBStatus { font: 12px Arial,sans-serif; background-color: #cfcfcf; text-align: left; border-bottom: 1pm solid #999999; text-indent: .75in; }
+
+/*tr.wrEntryRow:hover td { background-color: #cfcfcf; }*/
+
+tr.wrEntry {  }
+tr.wrEntry td { padding: 3px 3px; }
+tr.wrEntry td.Subject   { color: #ffffff; background-color: #1d476d; font-size: 16px; font-weight: bold; vertical-align: bottom; text-align: left; }
+tr.wrEntry td.By        { color: #ffffff; background-color: #0d375d; font-weight: bold; vertical-align: bottom; height: 5.5em; width: 15%; text-align: left; }
+tr.wrEntry td.Date      { color: #ffffff; background-color: #1d476d; font-size: 15px; vertical-align: bottom; text-align: right; }
+tr.wrEntry td.Priority  { color: #ffffff; background-color: #660000; font-weight: bold; vertical-align: top; text-align: left; }
+tr.wrEntry td.PM        { color: #ffffff; background-color: #660000; font-weight: bold; vertical-align: bottom;  text-align: left; }
+tr.wrEntry td.Post      { color: #000000; background-color: #ffffff; vertical-align: middle; text-align: left; }
+tr.wrEntry td.Status    { color: #ffffff; background-color: #330000; font-weight: bold; text-align: right; }
+tr.wrEntry td.StatusMsg { color: #ffffff; background-color: #333333; text-align: left; }
+tr.wrEntry td.Files	    { color: #ffffff; background-color: #660000; font-weight: bold; vertical-align: bottom; border-bottom: 10px solid #ffffff; text-align: right; }
+tr.wrEntry td.FilesMsg	{ color: #000000; background-color: #ffffff; vertical-align: top;  border-bottom: 10px solid #ffffff; text-align: left; }
+
+tr.wrComment { margin: 0; padding: 0; height: 1.5em; }
+tr.wrComment td { font: 12px/16px Arial,sans-serif; text-align: left; border-bottom: 1px solid #333333; margin: 0; padding: 3px 3px; }
+tr.wrComment td.Name { font-weight: bold; vertical-align: middle; width: 15%; }
+tr.wrComment td.Comment { vertical-align: middle; padding: 6px 3px; }
+tr.wrComment td.Date { vertical-align: top; text-align: right; }
+
+tr.cA td.Name    { color: #ffffff; background-color: #333333; }
+tr.cA td.Comment { color: #000000; background-color: #efefef; }
+tr.cA td.Date    { color: #000000; background-color: #efefef; }
+
+tr.cB td.Name    { color: #ffffff; background-color: #666666; }
+tr.cB td.Comment { color: #000000; background-color: #ffffff; }
+tr.cB td.Date    { color: #000000; background-color: #ffffff; }
+
+/* END:: Work Request System Styles */
+/**************************************/
+
+/**************************************/
+/* NAV STYLE */
+.menu { width: 120px; }
+
+#nav
+{
+	/* display: inline;*/
+	float: left;
+	width: 120px;
+	margin: 0px;
+}
+#nav a
+{
+	color: black;
+	font-size: 12px;
+	border: 0;
+}
+#nav a:hover
+{
+	color: maroon;
+}
+#nav ul
+{
+	list-style: none;
+	padding: 0px 0px 10px 0px;
+	margin:  10px 0px 0px 10px;
+	border-bottom: 2px solid black;
+}
+#nav ul li
+{
+	display: block;
+	border-top: 1px solid white;
+	border-bottom: 1px solid white;
+	padding: 0px 5px 0px 5px;
+	margin:  0px 0px 0px 0px;
+	position: relative;
+	z-index: 200;
+}
+#nav ul li a
+{
+	display: block;
+	width: 105px;
+	height: 20px;
+	padding: 3px 0px 0px 0px;
+	margin:  0px 0px 0px 0px;
+
+}
+#nav ul li a:hover
+{
+	text-decoration: none;
+}
+#nav ul li:hover, #nav ul li.O
+{
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+#nav ul ul
+{
+	display: none;
+	list-style: none;
+	position: absolute;
+	top: -10px;
+	left: 110px;
+	width: 200px;
+	border: 1px solid black;
+	background-color: white;
+	padding: 5px 0px 6px 0px;
+	margin:  0px 0px 0px 0px;
+	z-index: 300;
+}
+#nav ul ul li
+{
+	display: block;
+	border: 0px;
+	padding: 0px 10px 0px 10px;
+	margin:  0px 0px 0px 0px;
+	z-index: 400;
+}
+#nav ul ul li:hover, #nav ul ul li.O
+{
+	display: block;
+	border: 0px;
+}
+#nav ul ul li a:hover
+{
+	text-decoration: underline;
+	background: url('smallArrow.gif') no-repeat 0% 50%;
+	border: 0px;
+}
+#nav ul ul li a
+{
+	display: block;
+	padding: 0px 0px 3px 10px;
+	margin:  0px 0px 0px 0px;
+	width: 165px;
+	border: 0px;
+}
+
+#nav li:hover ul, #nav li.O ul
+{
+	display: block; /* The Magic */
+}
+
+#nav img
+{
+	border: 0px;
+}
+/* END NAV CODE */
+/**************************************/
+
+
+/**************************************/
+/* SPONSORS CODE */
+#sponsors {
+display: block;
+margin: 0px 0px 0px 0px;
+padding: 10px 0px 0px 0px;
+width: 120px;
+}
+
+#sponsors img {
+display: block;
+border: 0px;
+margin: 0px;
+padding: 0px 0px 10px 10px;
+width: 120px;
+}
+
+#sponsors p {
+padding-top: 15px;
+text-align: center;
+font-size: 10px;
+margin: 0px;
+padding: 0px;
+}
+/* END SPONSORS CODE */
+/**************************************/
+
+
+/**************************************/
+/* USAGE GRAPHS CODE */
+div.graph {
+border: 1px solid #000;
+padding: 5px;
+margin: 10px auto;
+width: 500px;
+}
+
+div.graph p { background-color: #660000; color: #fff; margin: 0; padding: 10px 0 1px 2px; }
+
+span.label { width: 90px; text-align: right; display: block; float: left; clear: left; padding: 0 10px 0 0; }
+
+span.bar { background-color: #1d476d; display: block; float: left; }
+span.a { background-color: #1d476d; }
+span.b { background-color: #3f698f; }
+
+/* END USAGE GRAPHS CODE */
+/**************************************/

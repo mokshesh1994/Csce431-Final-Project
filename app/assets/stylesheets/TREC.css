@@ -1,0 +1,12 @@
+﻿#header { height: 169px; background: #800 url('/images/trec/header.jpg') no-repeat center left; }
+#footer, #nav { background: #800 url('/images/trec/footer.jpg') repeat center left; }
+#nav { background: #800 url('/images/trec/nav.jpg') repeat center left; height:38px; border-bottom:solid 2px black; }
+#footer { border-top:solid 2px black; }
+#rightCase { background-color: #FFF; border: none; }
+a { color: #636363; font-weight:bold; }
+a:visited { color: #636363; }
+a:hover { color: #636363; }
+#nav li a { padding-left:10px; padding-right:10px; height:28px; }
+#nav li { border-right:none; }
+.loginStatus li { border:none; }
+.loginStatus li a { height:28px; }

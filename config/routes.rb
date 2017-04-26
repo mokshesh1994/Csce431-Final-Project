@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'access#login'
+  root 'access#index'
   get 'parameters/index'
 
   get 'parameters/show'

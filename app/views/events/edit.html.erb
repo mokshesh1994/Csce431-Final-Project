@@ -1,7 +1,7 @@
 
 <div>
     <h2>Update Event</h2>
-    <%= form_for(@event) do |f| %>
+    <%= form_for @event, html: {multipart: true } do |f| %>
         <%= error_messages_for(f.object) %>
         <table class="tableCenter">
             <tr>
@@ -11,6 +11,10 @@
             <tr>
                 <td class="columnLabel">Link</td>
                 <td><%= f.text_field(:link_to_event, size: 40) %></td>
+            </tr>
+            <tr>
+                <td class="columnLabel">Event Image</td>
+                <td><%= f.file_field :image %></td>
             </tr>
         </table>
         

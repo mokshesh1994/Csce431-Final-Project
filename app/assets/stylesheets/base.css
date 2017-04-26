@@ -1,0 +1,351 @@
+/*
+*]: General {
+*/
+body {
+	margin: 0;
+	padding: 0;	
+}
+img {
+	border: 0;
+	-ms-interpolation-mode:bicubic; 
+}
+em {
+	font-weight: normal;
+	font-style: italic;
+}
+strong {
+	font-weight: bold;
+}
+cite {
+	font-style: italic;
+	color: #333;
+}
+code {
+	display: block;
+	margin: 20px 5px;
+	padding: 10px 5px;
+	font-family: "Courier New" ,Courier,monospace;
+	border: 1px dotted #666;
+	background-color: #ccc;
+	color: #000;
+}
+samp {
+	font-family: "Courier New" ,Courier,monospace;
+}
+
+.center { margin-left: auto; margin-right: auto; text-align: center; }
+
+.hide {
+	display: none;
+}
+
+table {
+	border-collapse: collapse;
+	border: 1px solid #666;
+	margin: 5px auto;
+}
+tr {
+}
+td {
+	padding: 2px;
+	border: 1px solid #999;
+}
+td.r, .r { text-align: right; }
+td.l, .l { text-align: left; }
+td.c, .c { text-align: center; }
+tr.head td {
+	font-weight: bold;
+	border-bottom: 1px solid #000;
+	color: #fff;
+	background-color: #1d476d; 
+}
+tr.alt td{
+  background-color: #CCC;
+}
+tr.foot td { /*'this is used when the footer is just a note and needs to be de-emphasized on the page.'*/
+	color: #333;
+	background-color: #efefef;
+	font-size: 0.8em;
+}
+tr.footer td { /*'this is used when the foot is a total and needs to be larger and stand out on the page'*/
+  background-color: #efefef;
+  font-weight: bold;
+}
+tr.b td {
+	background-color: #eee;	
+}
+
+td.b {
+  font-weight: bold;
+}
+
+table.open { border: 0; }
+table.open td { border: 0; }
+table.left { margin-left:0px; }
+
+
+form {
+}
+form input {
+/*	border: 1px solid #666;*/
+}
+form textarea {
+	border: 1px solid #666;
+}
+
+.notifyGreen {
+	padding: 5px;
+	border: 1px solid #9F3;
+	background-color: #CF9;
+	color: #360;
+}
+
+.notifyRed {
+	padding: 5px;
+	border: 1px solid #900;
+	background-color: #F03;
+	color: #fff;
+}
+
+/*
+*]: General }
+*/
+
+
+
+/*
+*]: Calendar Style {
+*/
+#calendar {
+	text-align: center;
+	height:150px;
+}
+
+#calendar table {
+	margin: 0 auto;
+	padding: 0;
+	width: 152px;
+	border: 1px solid #666;
+	background-color: #fff;
+	border-collapse: collapse;
+}
+
+#calendar tr {
+	background-color: #fff;
+}
+
+#calendar td {
+	margin: 0;
+	padding: 0;
+	width: 22px;
+	height: 18px;
+	font-size: 12px;
+	line-height: 18px;
+	color: #000;
+	vertical-align: middle;
+	text-align: center;
+	border: 0;
+}
+
+#calendar tr.title td {
+	color: #ffffff;
+	background-color: #800;
+}
+
+#calendar tr.title td.r {
+	width: 20px;
+	height: 15px;
+	text-align: right;
+}
+
+#calendar tr.title td.c {
+	font-weight: bold;
+	font-size: 11px;
+	width: 112px;
+	height: 15px;
+}
+
+#calendar tr.title td.l {
+	width: 20px;
+	height: 15px;
+	text-align: left;
+}
+
+#calendar td.event {
+	background-color: #1d476d;
+}
+
+#calendar td.event a {
+	color: #ccc;
+	background-color: #1d476d;
+	font-weight: bold;
+	width: 22px;
+	height: 18px;
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+#calendar td.event a:hover {
+	color: #fff;
+	background-color: #107ec3;
+	text-decoration: none;
+}
+
+#calendar td.today {
+	background-color:#ADD8E6;
+	border: 1px solid #008FFF;
+}
+
+.today {
+	font-weight: bold;
+}
+
+#calendar td.diffMonth {
+	color: #999;
+	font-size: 10px;
+}
+
+#calendar tr.headers td {
+	font-size: 12px;
+	font-weight: bold;
+	color: black;
+	border-bottom: gray 1px solid;
+	background-color: #dcdcdc;
+	height: 18px;
+	width: 22px;
+}
+/*
+*]: Calendar Style }
+*/
+
+
+
+/*
+*]: Popup Event Box {
+*/
+#calEventBox {
+	z-index: 10000;
+	width: 0px;
+	height: 0px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background-color: #808080;
+	display: none;
+	margin: 0;
+	padding: 0;
+}
+.popupEventDiv {
+	margin: 0;
+	padding: 4px;
+	background-color: #1D476D;
+}
+*:first-child+html .popupEventDiv {
+	background-color: #1d476d;
+}
+.popupInner {
+	text-align: left; /*font: 11px/13px Verdana,Tahoma,Arial,sans-serif; */
+	color: #333;
+	margin: 0;
+	padding: 7px;
+	background-color: #fff;
+	border: solid 1px #900;
+	width: 300px;
+}
+.popupEventDiv h3 {
+	font-size: 1.85em;
+	line-height: 27px;
+	font-weight: bold;
+	color: #800;
+	margin: 0 0 3px 0;
+	padding: 0 0 2px 0;
+	border-bottom: 1px solid #000;
+	z-index: 10002;
+}
+.popupEventDiv h5 {
+	font-size: .80em;
+	font-weight: bold;
+	color: #000;
+	margin: 3px 0 0 0;
+	padding: 0;
+	z-index: 10003;
+}
+.popupEventDiv p {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	z-index: 10004;
+}
+.popupEventDiv p em {
+	font-weight: bold;
+	font-style: normal;
+}
+.popupEventDiv p.desc {
+	margin: 0;
+	padding: 3px 0;
+	text-align: justify;
+	border-top: 1px solid #666;
+	z-index: 10005;
+}
+.toolTipDiv {
+	margin: 0;
+	padding: 3px;
+	background-color: #1D476D;
+	color: #000;
+}
+.toolTipDiv p {
+	margin: 0;
+	padding: 2px 4px;
+	border: 1px solid #800;
+	background-color: #fff;
+	color: #000;
+}
+/* Credit: radiantmars.com*/
+#previewimageid {
+	font-size: 0.85em;
+	position: absolute;
+	visibility: hidden;
+	left: 0px;
+	top: 0px;
+	height: 0px;
+	z-index: 200;
+	text-align: left;
+}
+/* End Credit: radiantmars.com*/
+
+/*
+*]: Popup Event Box }
+*/
+
+
+
+/*
+*]: Sponsors Box {
+*/
+#sponsors {
+	width: 152px;
+	background-color: #ffffff;
+	display: block;
+	margin: 5px auto;
+	padding: 0;
+	text-align: center;
+	border: 1px solid #afafaf;
+}
+
+#sponsors img {
+	margin: 0 auto;
+	padding: 5px 2px 5px 2px;
+}
+
+#sponsors p {
+	font-weight: bold;
+	font-size: 10px;
+	margin: 0 0 0 0;
+	padding: 5px 0 2px 0;
+	background-color: #1d476d;
+	color: #ffffff;
+	border-bottom: #498664;
+}
+/*
+*]: Sponsors Box }
+*/

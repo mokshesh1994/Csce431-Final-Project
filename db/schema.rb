@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170406211427) do
+ActiveRecord::Schema.define(version: 20170419005514) do
 
   create_table "committees", force: :cascade do |t|
     t.string   "name",        limit: 50
@@ -30,11 +30,15 @@ ActiveRecord::Schema.define(version: 20170406211427) do
   end
 
   create_table "events", force: :cascade do |t|
-    t.string   "name",          limit: 40, null: false
+    t.string   "name",               limit: 40, null: false
     t.string   "link_to_event"
     t.string   "image"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "members", force: :cascade do |t|

@@ -1,0 +1,215 @@
+body { margin: 0 auto; padding: 0; font: 10pt "Lucida Grande",Tahoma,Verdana,Helvetica,Arial,sans-serif; text-align: center; }
+a { color: #000; text-decoration: none; }
+a:visited { color: #000; }
+img { border: 0; }
+a img { border: 0; }
+p { }
+hr { color:#000; }
+
+/* Positioning & Sizing */
+#case { margin: 0 auto; padding: 0; }
+#header {  }
+#header a span {}
+#subHeader { display: none; }
+#nav { display: none; }
+.loginStatus { display:none; }
+#content { text-align: left; padding: 0; margin: 0; }
+#article { padding: 20px 20px 30px 20px; float: left; }
+#rightCase { display: none; }
+#footer { clear: both; /*float: left;*/ }
+/* End Positioning & Sizing */
+
+form {}
+form input { margin: 0; padding: 2px 4px; background-color: #efefef; color: #000; }
+form input.submit { margin: 0; padding: 2px 4px; background-color: #1d476d; color: #fff; }
+form input:focus { border-color: #f33; }
+form fieldset { margin: 5px 0; padding: 0; border: 0; }
+form legend { display: block; font-weight: bold; color: #000; padding: 0; margin: 0; }
+form legend em, em.form { font-style: normal; color: #f00; }
+form select { margin: 0; padding: 0; border: 1px solid #999; background-color: #efefef; } 
+form textarea { width: 600px; font: 1.00em "Lucida Grande",Tahoma,Verdana,Helvetica, Arial, sans-serif; margin: 3px 0; padding: 2px; background-color: #efefef; }
+form textarea:focus { border-color: #f33; }
+
+form.inlineForm {
+	background-color: #efefef;
+	border: 1px solid #e3e3e3;
+	padding: 10px;
+}
+
+.oneCol { background: none; }
+.oneCol #article {  }
+.oneCol #rightCase { display: none; }
+.oneCol #article form textarea {  }
+
+.page-break-after { page-break-after:always; }
+
+.printOnly { }
+.hide { display: none; }
+.left { text-align: left; }
+.right { text-align: right; }
+
+.indent { margin-left: 30px; }
+.indent-small { margin-left: 15px; }
+.indent-hang { text-indent: -30px; margin-left:30px; }
+.indent-hang-large { text-indent: -40px; margin-left:40px; }
+
+.pos-rel { position:relative; }
+.pos-abs { position:absolute; }
+.pos-topright { position:absolute; right:0; top:0; }
+
+#menu h1 { margin-bottom:5px; }
+#menu p { display: none; }
+
+/*Keep these for when stupid people print non-official invoices*/
+.littlepadleft { padding-left:7px; }
+.littlepadright{ padding-right:7px; }
+.below2 { border-bottom: solid 2px #000; }
+.right2 { border-right:  solid 2px #000; }
+.left2  { border-left:   solid 2px #000; }
+.above2 { border-top:    solid 2px #000; }
+.below1 { border-bottom: solid 1px #000; }
+.below1soft { border-bottom: solid 1px #999; }
+/*-------------------------------------------------------------*/
+
+#article h1 { font-size: 2.00em; border-bottom: 2px solid #800; padding: 0 0 8px 0; }
+#article h2 { font-size: 1.50em; }
+#article h3 { font-size: 1.33em; }
+#article h4 { font-size: 1.25em; }
+/*Success Box*/
+#article h5 { border: 1px solid #9F3; background-color: #CF9; color: #360; font-size: 14px; margin: 10px 0; padding: 5px 5px; }
+/*Failure Box*/
+#article h6 { border: 1px solid #dd3c10; background-color: #ffebe8; color: #000; font-size: 14px; margin: 10px 0; padding: 5px 5px; }
+#article p { line-height: 1.5em; }
+#article p.note { font-size: 0.85em; color: #454545; margin-top: 5px; }
+
+.newsItem { padding: 10px 0 10px 5px; }
+.newsItem p { margin: 0; padding: 0; line-height: 1.25em; }
+.newsItem h3 { margin: 0; padding: 0; line-height: 1.25em; }
+
+.newsItemF { border-bottom: 1px solid #333; }
+.newsItemF h3 { padding-bottom: 0; margin-bottom: 0; }
+.newsItemF p.date { font-weight: bold; padding-top: 5px; margin-top: 0; }
+.newsItemF p.clip {}
+.newsItemF p.url  {}
+.newsItemF p.note { font-style: italic; }
+
+/**************************************/
+/* BEGIN PORTAL CODE - incorporated into the NAV structure */
+#portal em { font-style: normal; text-decoration: underline; }
+/* END PORTAL CODE */
+/**************************************/
+
+
+/**************************************/
+/* Module Styles */
+.module { border-top: 2px solid #300; margin: 10px 0; padding: 5px 0; font-size: 12px; }
+.module h1 { font-size: 15px; font-weight: bold; padding: 0 0 0 0; margin: 0 0 5px 0; }
+.module h2 { font-size: 13px; font-weight: bold; padding: 0 0 0 0; margin: 4px 0 2px 0; }
+.module h3 { font-size: 11px; font-weight: bold; padding: 0 0 0 0; margin: 0 0 0 0; }
+.module p { font-size: 12px; }
+.module p.note { font-size: 10px; color: #666; padding: 0 0 0 0; margin: 0 0 0 0; }
+.module .entry { margin: 3px 0 5px 3px; border-top: 1px solid #999; }
+.module .first { border-top: none; }
+.module .entry .date { font-weight: bold; }
+.module .entry .time {}
+.module .entry .title { font-weight: bold; }
+
+.topModule { border-top: 0; }
+/* End Module Styles */
+/**************************************/
+
+
+/**************************************/
+/* DataSheet Styles */
+table.datasheet { border-collapse: collapse; padding: 0; margin: 0; border: 1px solid black; table-layout: auto;}
+table.datasheet tr {  }
+table.datasheet td { font-size: 10px; line-height: 12px; border: 1px solid #666666; padding: 1px 2px; }
+table.datasheet tr.header { background-color: #1d476d; }
+table.datasheet tr.header td { color: #ffffff; font-weight: bold; padding: 4px 2px; border: 1px solid #cccccc; }
+table.datasheet td.totals { background-color: #cfcfcf; font-weight: bold; }
+td.red { color: #cc0000; }
+td.green { color: #339933; }
+/* End DataSheet Styles */
+/**************************************/
+
+/**************************************/
+/* BEGIN:: Project Management System Styles */
+table.wrTable { width: 100%; font-size: 12px; line-height: 14px; margin: 10px 0; border-collapse: collapse; }
+
+table.wrTable td { border: 0px; margin: 0px; }
+
+td.title { font-weight: bold; font-size: 15pt; line-height: 17pt; }
+
+tr.wrTblHdr { background-color: #1d476d; }
+tr.wrTblHdr a { color: #fff; }
+tr.wrTblHdr td { font-size: 14px; color: #fff; text-align: left; padding: 0 3px 2px 2px; height: 2em; vertical-align: bottom; text-align: center; }
+table.wrTable td.r { text-align: right; }
+table.wrTable td.l { text-align: left; }
+tr.wrEntryRow { }
+tr.wrEntryRow td { font-size: 12px; text-align: left; padding: 2px 4px 0 1px; }
+tr.Status td { border-bottom: 1px solid #999; padding: 1px 0 4px 1px; }
+tr.wrEntryRow td a { font-weight: bold; }
+
+tr.wrEntry { margin: 0; }
+tr.wrEntry td { padding: 3px 3px; margin: 0; }
+tr.wrEntry td.Subject   { color: #fff; background-color: #1d476d; font-size: 16px; font-weight: bold; vertical-align: bottom; }
+tr.wrEntry td.By        { color: #fff; background-color: #0d375d; font-weight: bold; vertical-align: bottom; height: 5.5em; width: 15%; }
+tr.wrEntry td.Date      { color: #fff; background-color: #1d476d; font-size: 15px; vertical-align: bottom; text-align: right; }
+tr.wrEntry td.Post      { color: #000; background-color: #fff; vertical-align: top; line-height: 1.25em; }
+tr.wrEntry td.Priority  { color: #fff; background-color: #600; font-weight: bold; vertical-align: top; padding: 0.4em 2px; }
+tr.wrEntry td.Status    { color: #fff; background-color: #300; font-weight: bold; padding: 0.4em 2px; }
+tr.wrEntry td.StatusMsg { color: #fff; background-color: #333; }
+tr.wrEntry td.Due       { color: #fff; background-color: #600; font-weight: bold; vertical-align: top; height: 1.2em; }
+tr.wrEntry td.Space		{ border-left: 0; border-right: 0; }
+
+tr.wrComment { margin: 0; padding: 0; height: 1.5em; }
+tr.wrComment td { font-size: 12px; line-height: 16px; text-align: left; border-bottom: 1px solid #333333; margin: 0; padding: 3px 3px; }
+tr.wrComment td.Name { font-weight: bold; vertical-align: top; width: 15%; }
+tr.wrComment td.Comment { vertical-align: top; padding: 6px 3px; }
+tr.wrComment td.Date { vertical-align: top; text-align: right; }
+tr.wrComment p { margin-top:0px;}
+
+tr.cA td.Name    { color: #fff; background-color: #333; }
+tr.cA td.Comment { color: #000; background-color: #efefef; }
+tr.cA td.Date    { color: #000; background-color: #efefef; }
+
+tr.cB td.Name    { color: #fff; background-color: #666; }
+tr.cB td.Comment { color: #000; background-color: #fff; }
+tr.cB td.Date    { color: #000; background-color: #fff; }
+
+form.pmForm fieldset { margin: 5px 0; padding:0; width: 600px; }
+form.pmForm legend { padding: 0 2px 0 0; }
+form.pmForm p { margin: 0; padding: 0; }
+form.pmForm textarea { font: 12px "Lucida Grande",Tahoma,Verdana, Arial, sans-serif; margin: 3px 0; padding: 2px; background-color: #efefef; width: 600px; }
+form.pmForm select { margin: 0; padding: 0; border: 1px solid #999; background-color: #efefef; }
+form.pmForm input { margin: 0; padding: 2px 4px; background-color: #efefef; color: #000; }
+form.pmForm input.submit { margin: 0; padding: 2px 4px; background-color: #1d476d; color: #fff; }
+/* END:: Project Management System Styles */
+/**************************************/
+
+
+/**************************************/
+/* BEGIN:: Career Fair Styles */
+
+.section {background-color: #eaeaea; border: solid 1px #666; padding: 10px;}
+.section h3 { margin: 0; background-color: #300; color: #fff; padding: 15px 10px 5px 10px; }
+.section p {padding-left:20px;}
+
+#invoice table {width:630px;}
+#invoice tr td {border: none;}
+
+
+/* End Career Fair Styles */
+/**************************************/
+
+/**************************************/
+/* Footer Styles */
+#footer { clear: both; background-color: #800; font-size: 0.8em; line-height: 14px; text-align: center; color:#ccc; padding: 5px 0 10px 0; margin: 0; }
+#footer a { color: #ccc; }
+#footer p { padding: 15px 10px 25px 10px; margin: 0; }
+#footer p span.l { display:block; text-align: center;  padding: 3px 0px 4px 0px; }
+#footer p span.r { display: none; }
+#footer p span a { padding: 3px 5px 4px 5px; margin: 0; }
+#footer p span a:hover { background-color: #1d476d; color: #fff; text-decoration: none; }
+/* End Footer Styles */
+/**************************************/

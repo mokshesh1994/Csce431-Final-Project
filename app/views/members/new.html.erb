@@ -1,7 +1,7 @@
 
 <div>
     <h2>Create Member</h2>
-    <%= form_for(@member) do |f| %>
+    <%= form_for @member, html: {multipart: true } do |f| %>
         <%= error_messages_for(f.object) %>
         <table class="tableCenter">
             <tr>
@@ -43,6 +43,10 @@
             <tr>
                 <td class="columnLabel">Division</td>
                 <td><%= collection_select(:member, :division_id, Division.order(:name), :id, :name, {}, {:multiple => false}) %></td>
+            </tr>
+             <tr>
+                <td class="columnLabel">Member Image</td>
+                <td><%= f.file_field :image %></td>
             </tr>
         </table>
         

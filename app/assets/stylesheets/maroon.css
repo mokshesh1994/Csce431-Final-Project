@@ -1,0 +1,28 @@
+/* SCHEDULE */
+
+.event h3 {
+	color:#0094ff;
+}
+
+.event .icon {
+	color:#ffffff;
+	background:#998031;
+}
+
+.event .description {
+	background:#efefef;
+
+}
+
+
+/* Schedule Pagination */
+
+#days .item {
+	background:#efefef;
+}
+
+#days .item:hover,
+#days .item:active {
+	color:#ffffff;
+	background:#998031;
+}

@@ -4,7 +4,7 @@ class CreateEvents < ActiveRecord::Migration
     create_table :events do |t|
       t.string "name", :null => false, :limit => 40
       t.string "link_to_event"
-      t.binary "image"
+      t.attachment :image
       t.timestamps null: false
     end
   end

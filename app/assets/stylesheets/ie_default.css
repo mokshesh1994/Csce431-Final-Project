@@ -1,0 +1,40 @@
+/* Fixes Issues with IE not rendering things correctly */
+#case { width: 921px; border-right:solid 1px #666; background-color: #fff; }
+#header { width: 921px; }
+#subHeader { display: none; }
+#nav { width: 921px; }
+#content { width: 921px; }
+#article { width: 710px; }
+#rightCase { width: 160px; }
+#footer { width: 921px; }
+
+.oneCol #article { width: 881px; }
+
+.indent { margin-left: 30px; }
+.indent-small { margin-left: 15px; }
+/*For some reason, this hanging indent code doesn't work in ie...*/
+.indent-hang { text-indent: 0px; margin-left:0px; }
+.indent-hang-tiny { text-indent: 0px; margin-left:0px; }
+.indent-hang-small { text-indent: 0px; margin-left:0px; }
+.indent-hang-large { text-indent: 0px; margin-left:0px; }
+
+form input { background-color:#ffffff; }
+
+#nav li {
+    border-right: 1px solid #666;
+}
+
+#nav li a {
+	height: 13px;
+	padding-bottom: 12px;
+}
+#nav ul li {
+	height: 13px;
+}
+#nav ul li a {
+	padding: 3px 0px 3px 10px;
+	margin:  -1px 0;
+	height: 15px;
+}
+#footer p { padding: 15px 10px 15px 10px; margin: 0; }
+#footer p span a { padding: 3px 5px 4px 5px; display: inline-block; }

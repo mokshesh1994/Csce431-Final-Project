@@ -4,6 +4,10 @@
     
     <table class="tableCenter">
         <tr>
+              <td class="columnLabel boldText">Event Image:</td>
+            <td><%=image_tag @event.image.url(:small) %></td> 
+        </tr>
+        <tr>
             <td class="columnLabel boldText">Name:</td>
             <td><%= @event.name %></td>
         </tr>

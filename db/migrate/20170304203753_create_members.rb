@@ -12,7 +12,7 @@ class CreateMembers < ActiveRecord::Migration
       t.integer "member_since", :null => false
       t.string "hometown", :null => false, :limit => 50
       t.text "pro_interests"
-      t.binary "picture"
+      t.attachment :image
       t.timestamps null: false
     end
   end

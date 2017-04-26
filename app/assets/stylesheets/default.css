@@ -1,0 +1,933 @@
+﻿body { margin: 0; padding: 0; font: 0.82em "Lucida Grande",Tahoma,Verdana,Helvetica,Arial,sans-serif; text-align: center; background: #7d7d7d url('/images/background995.gif') repeat-y center; color:#000; }
+a { color: #800; text-decoration: none; }
+a:visited { color: #800; }
+a:hover { text-decoration: underline; color: #A64040; }
+img { border: 0; }
+a img { border: 0; }
+p { margin-top:0px; }
+hr { color:#800; background-color:#800; }
+ul.nobullet { list-style: none; }
+
+/* Always show sidebar to avoid an odd white bar surrounding content */
+html { overflow: -moz-scrollbars-vertical; }
+
+
+/* Positioning & Sizing */
+#case { width: 959px; background-color: #fff; color: #000; margin: 0 auto; padding: 0; z-index: 200; }
+#header { width: 959px; height: 150px; background: #000 url('../images/hdrImg01.jpg') no-repeat center center; margin: 0;  }
+#subHeader { display: none; }
+#nav { width: 959px; margin: 0; z-index: 380; }
+#content { width: 959px; text-align: left; padding: 0; margin: 0; z-index: 100; }
+#article { width: 708px; padding: 20px 20px 30px 20px; float: left; z-index: 300; min-height:450px; height:auto !important; height:450px;}
+#rightCase { width: 200px; background-color: #eaeaea; border-left: solid 1px #666; border-bottom: solid 1px #666; margin: 0; padding: 0px 5px 0px 5px; float: left; }
+#footer { width: 959px; clear: both; /*float: left;*/ }
+/* End Positioning & Sizing */
+
+#content a { font-weight:bold; }
+
+form {}
+form input { margin: 0; padding: 2px 4px; color: #000; vertical-align:middle; }
+input.submit { margin: 0; padding: 2px 4px; background-color: #1d476d; color: #fff; }
+form fieldset { margin: 5px 0; padding: 0; border: 0; }
+form legend { display: block; font-weight: bold; color: #000; padding: 0; margin: 0; }
+form legend em, em.form { font-style: normal; color: #f00; }
+form select { margin: 0; padding: 0; border: 1px solid #999; background-color: #efefef; } 
+form textarea { width: 600px; font: 1.00em "Lucida Grande",Tahoma,Verdana,Helvetica, Arial, sans-serif; margin: 3px 0; padding: 2px; background-color: #efefef; }
+
+input.checkbox, span.checkbox
+{
+    padding:4px 0;
+    display:inline-block;
+}
+
+.oneCol table.GridView
+{
+    width:850px;
+}
+
+table.GridView
+{
+    width:650px;
+}
+
+.GridView td, .GridView th
+{
+    padding-left:3px;
+    padding-right:3px;
+    border:0;
+}
+
+.GridViewHeader, .FieldHeader, .CommandRow
+{
+    background-color:#1d476d;
+    color:#ffffff;
+}
+
+.GridViewHeader th
+{
+    font-weight:normal;
+}
+
+.GridViewHeader th a, .CommandRow a
+{
+    color:#ffffff; 
+}
+
+#rightCase table.GridView
+{
+    width:100%;
+}
+
+#rightCase .GridView th
+{
+    font-weight:bold;
+}
+
+.FieldHeader, .CommandRow
+{
+    font-weight:bold;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.CommandRow 
+{
+    text-align:center;
+}
+
+.DefaultRow, .AltRow, table.open td
+{
+    border-top:solid 1px #999;
+}
+
+.AltRow
+{
+    background-color:#EAEAEA;
+}
+
+.Highlighted
+{
+    background-color: #CF9;
+}
+
+.HighlightedAltRow
+{
+    background-color: #BD8;
+}
+
+table.open tr.head td
+{
+	border-top:none;
+}
+
+table.open tr.head a
+{
+	color:#fff;
+	text-decoration:none;
+}
+
+
+table.noBorders tr, table.noBorders td, #rightCase td
+{
+	border: none;
+}
+
+
+.optional { color:#707070; }
+
+span.dateFormat { font-size: 10px; color: #BABABA; } 
+
+form.inlineForm {
+	background-color: #efefef;
+	border: 1px solid #e3e3e3;
+	padding: 10px;
+}
+
+.oneCol { background: none; }
+.oneCol #article { width: 880px; }
+.oneCol #rightCase { display: none; }
+.oneCol #article form textarea { width: 850px; }
+
+.printOnly { display: none; }
+.hide { display: none; }
+
+.left { text-align: left; }
+.right { text-align: right; }
+
+.indent { margin-left: 30px; }
+.indent-small { margin-left: 15px; }
+.indent-large { margin-left: 50px; }
+.indent-hang { text-indent: -30px; margin-left:30px; }
+.indent-hang-tiny { text-indent: -10px; margin-left:10px; }
+.indent-hang-small { text-indent: -20px; margin-left:20px; }
+.indent-hang-large { text-indent: -40px; margin-left:40px; }
+
+.pos-rel { position:relative; }
+.pos-abs { position:absolute; }
+.pos-topright { position:absolute; right:0; top:0; }
+
+.pos-topright h3 { /*margin-top: 0px;*/ }
+
+#menu h1 { margin-bottom:5px; }
+#menu a, #rightCase a { font-weight:normal; }
+
+#article h1 { font-size: 2.00em; margin-top: 0px; border-bottom: 2px solid #800; padding: 0 0 8px 0; }
+#article h2 { font-size: 1.50em; }
+#article h3 { font-size: 1.33em; margin-bottom: 5px;}
+#article h4 { font-size: 1.25em; }
+/*Success Box*/
+#article h5, .success { border: 1px solid #9F3; background-color: #CF9; color: #360; font-size: 14px; margin: 10px 0; padding: 5px 5px; }
+/*Failure Box*/
+#article h6, .failure { border: 1px solid #900; background-color: #F03; color: #fff; font-size: 14px; margin: 10px 0; padding: 5px 5px; }
+#article p { line-height: 1.4em; }
+#article p.note { font-size: 0.85em; color: #454545; margin-top: 5px; }
+
+/* Link attention testing */
+#article p:hover a { border-bottom: 1px dotted #900; }
+#article p:hover a:hover { border-bottom: 1px solid #900; text-decoration: none; }
+/* End: link attention */
+
+.newsItem { padding: 10px 0 10px 5px; }
+.newsItem p { margin: 0; padding: 0; line-height: 1.25em; }
+.newsItem h3 { margin: 0; padding: 0; line-height: 1.25em; }
+
+.newsItemF { border-bottom: 1px solid #333; }
+.newsItemF h3 { padding-bottom: 0; margin-bottom: 0; color: #800}
+.newsItemF p.date { font-weight: bold; padding-top: 5px; margin-top: 0; }
+.newsItemF p.clip {}
+.newsItemF p.url  {}
+.newsItemF p.note { font-style: italic; }
+
+a.FPN:visited { color: #800;}
+/**************************************/
+/* BEGIN PORTAL CODE - incorporated into the NAV structure */
+#portal em { font-style: normal; text-decoration: underline; }
+/* END PORTAL CODE */
+/**************************************/
+
+
+
+
+/*
+*]: Database Update {
+*/
+#dbUpdate { position: absolute; top: 33%; left: 33%; height: 33%; width: 33%; padding: 0; margin: 0; vertical-align: middle; text-align: center; }
+#dbStatus { margin: 0 auto; padding: 0; background-color: #900; border: 1px solid #1d476d; width: 250px; height: 109px; vertical-align: middle; }
+#dbStatus h2 { margin: 25px 0 0 0; padding: 1px; font: bold 20px "Lucia Grande",Verdana, Arial, sans-serif; color: #1d476d; background-color: #fff; height: 25px; }
+#dbStatus p { margin: 0; padding: 17px 0 0 0; }
+#dbStatus p img { margin: 0; padding: 0; border: 0px; }
+/*
+*]: Database Update }
+*/
+
+
+
+
+
+/*AutoComplete flyout */
+
+.autocomplete_completionListElement 
+{  
+	visibility : hidden;
+	padding: 0px;
+	margin : 0px!important;
+	background-color : inherit;
+	color : windowtext;
+	border : buttonshadow;
+	border-width : 1px;
+	border-style : solid;
+	cursor : 'default';
+	overflow : auto;
+	height : 200px;
+    text-align : left; 
+    list-style-type : none;
+}
+
+/* AutoComplete highlighted item */
+
+.autocomplete_highlightedListItem
+{
+	background-color: #EAEAEA;
+	color: black;
+	padding: 1px;
+}
+
+/* AutoComplete item */
+
+.autocomplete_listItem 
+{
+	background-color : window;
+	color : windowtext;
+	padding : 1px;
+}
+
+
+
+
+
+/**************************************/
+
+
+
+
+#cf-status {
+	border: 1px solid #E7E7E7;
+	color: #000;
+	background-color: #F7F7F7;
+	text-align:center;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+#announcement
+{
+    border: 1px solid #900; background-color: #F03; color: #D1E1E1
+}
+
+#cf-status h3 { font-size: 20px; margin: 0; padding: 0; }
+#cf-status h5 { border: 1px solid #9F3; background-color: #CF9; color: #360; font-size: 14px; margin: 0 50px; padding: 5px 5px; }
+#cf-status h6 { border: 1px solid #900; background-color: #F03; color: #fff; font-size: 14px; margin: 0 50px; padding: 5px 5px; }
+#cf-status p { margin: 0 auto; padding: 0; text-align: left; width: 300px; }
+#cf-status p strong { width: 150px; text-align:right; display: block; float: left; }
+
+#cf-status table, #cf-status tr, #cf-status td { border: 0px; }
+
+
+
+
+/**************************************/
+
+
+
+/*************************************/
+/* TabContainer Styles */
+.NewsTab .ajax__tab_header 
+{
+   color: #000;
+   font-weight: bold;
+   border-bottom: 5px solid #800;
+   font-size: 18px;
+   
+}
+
+.NewsTab .ajax__tab_body
+{
+    border: 1px solid #000000;
+    background-color:#F8F8F8;
+    border-left: 2px solid #800;
+    border-top: 1px solid #000;
+    padding-right: 4px;
+    
+     
+}
+
+.NewsTab .ajax__tab_outer
+{
+    background-color: #000000;
+   border-bottom: 1px solid #000000; 
+   
+}
+
+.NewsTab .ajax__tab_inner
+{
+    padding: 3px;
+    margin-right: 1px;
+    margin-left: 1px;
+    margin-top: 1px;
+    border-bottom: 1px solid #000;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#EAEAEA'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#EAEAEA)); /* for webkit browsers */
+    background: -moz-linear-gradient(top, #FFFFFF, #EAEAEA);background-color:#EAEAEA;
+}
+.NewsTab .ajax__tab_hover .ajax__tab_outer
+{
+    background-color: #000000;
+     
+}
+.NewsTab .ajax__tab_hover .ajax__tab_inner
+{
+    
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#EAEAEA', endColorstr='#EDF2F3'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#EAEAEA), to(#EDF2F3)); /* for webkit browsers */
+    background: -moz-linear-gradient(top, #EAEAEA, #EDF2F3);
+   
+  
+}
+.NewsTab .ajax__tab_active .ajax__tab_outer
+{
+    
+}
+.NewsTab .ajax__tab_active .ajax__tab_inner
+{
+    padding-top: 7px;
+    font-weight :bolder;
+    border-right:1px solid #000;  
+    border-left: 1px solid #800;  
+}
+
+
+
+
+
+
+/**************************************/
+/* Module Styles */
+.module { border-top: 2px solid #300; margin: 10px 0; padding: 5px 0; font-size: 12px; }
+.module h1 { font-size: 15px; font-weight: bold; padding: 0 0 0 0; margin: 0 0 5px 0; }
+.module h2 { font-size: 13px; font-weight: bold; padding: 0 0 0 0; margin: 4px 0 2px 0; }
+.module h3 { font-size: 11px; font-weight: bold; padding: 0 0 0 0; margin: 0 0 0 0; }
+.module p { font-size: 12px; }
+.module p.note { font-size: 10px; color: #666; padding: 0 0 0 0; margin: 0 0 0 0; }
+.module .entry { margin: 3px 0 5px 3px; border-top: 1px solid #999; }
+.module .first { border-top: none; }
+.module .entry .date { font-weight: bold; }
+.module .entry .time {}
+.module .entry .title { font-weight: bold; }
+
+.topModule { border-top: 0; }
+/* End Module Styles */
+/**************************************/
+
+
+/**************************************/
+/* DataSheet Styles */
+table.datasheet { border-collapse: collapse; padding: 0; margin: 0; border: 1px solid black; table-layout: auto;}
+table.datasheet tr {  }
+table.datasheet td { font-size: 10px; line-height: 12px; border: 1px solid #666666; padding: 1px 2px; }
+table.datasheet tr.header { background-color: #1d476d; }
+table.datasheet tr.header td { color: #ffffff; font-weight: bold; padding: 4px 2px; border: 1px solid #cccccc; }
+table.datasheet td.totals { background-color: #cfcfcf; font-weight: bold; }
+td.red { color: #cc0000; }
+td.green { color: #339933; }
+td.center {text-align: center;}
+/* End DataSheet Styles */
+/**************************************/
+
+/**************************************/
+/* BEGIN:: Project Management System Styles */
+table.wrTable { width: 100%; font-size: 12px; line-height: 14px; margin: 10px 0; border-collapse: collapse; }
+
+table.wrTable td { border: 0px; margin: 0px; }
+
+td.title { font-weight: bold; font-size: 15pt; line-height: 17pt; }
+
+tr.wrTblHdr { background-color: #1d476d; } /* #1d476d = blue */
+tr.wrTblHdr a { color: #fff; }
+tr.wrTblHdr td { font-size: 14px; color: #fff; text-align: left; padding: 0 3px 2px 2px; height: 2em; vertical-align: bottom; text-align: center; }
+table.wrTable td.r { text-align: right; }
+table.wrTable td.l { text-align: left; }
+tr.wrEntryRow { }
+tr.wrEntryRow td { font-size: 12px; text-align: left; padding: 2px 4px 0 1px; }
+tr.Status td { border-bottom: 1px solid #999; padding: 1px 0 4px 1px; }
+tr.wrEntryRow td a { font-weight: bold; }
+/* Start: Individual projects within project management tab */
+tr.wrEntry { margin: 0; }
+tr.wrEntry td { padding: 3px 3px; margin: 0; }
+tr.wrEntry td.Subject   { color: #fff; background-color: #1d476d; font-size: 16px; font-weight: bold; vertical-align: bottom; }
+tr.wrEntry td.By        { color: #fff; background-color: #0d375d; font-weight: bold; vertical-align: bottom; height: 5.5em; width: 15%; }
+tr.wrEntry td.Date      { color: #fff; background-color: #1d476d; font-size: 15px; vertical-align: bottom; text-align: right; }
+tr.wrEntry td.Post      { color: #000; background-color: #FFFFFF; vertical-align: top; line-height: 1.25em; }
+tr.wrEntry td.Priority  { color: #fff; background-color: #600; font-weight: bold; vertical-align: top; padding: 0.4em 2px; }
+tr.wrEntry td.Status    { color: #fff; background-color: #300; font-weight: bold; padding: 0.4em 2px; }
+tr.wrEntry td.StatusMsg { color: #fff; background-color: #333; }
+tr.wrEntry td.Due       { color: #fff; background-color: #600; font-weight: bold; vertical-align: top; height: 1.2em; }
+tr.wrEntry td.Space		{ border-left: 0; border-right: 0; }
+tr.wrEntry td.PM		{ color: #fff; background-color: #0d375d; font-weight: bold; }
+tr.wrEntry td.Edit		{ color: #fff; background-color: #1d476d; }
+tr.wrEntry td.Edit a	{ color: #fff; font-weight: bold; }
+tr.wrEntry td.History	{ color: #fff; background-color: #1d476d; text-align:right; }
+tr.wrEntry td.History a	{ color: #fff; font-weight: bold; }
+
+tr.wrComment { margin: 0; padding: 0; height: 1.5em; }
+tr.wrComment td { font-size: 12px; line-height: 16px; text-align: left; border-bottom: 1px solid #333333; margin: 0; padding: 3px 3px; }
+tr.wrComment td.Name { font-weight: bold; vertical-align: top; width: 15%; }
+tr.wrComment td.Comment { vertical-align: top; padding: 6px 3px; }
+tr.wrComment td.Date { vertical-align: top; text-align: right; }
+tr.wrComment p { margin-top:0px; }
+
+tr.cA td.Name    { color: #fff; background-color: #333; }
+tr.cA td.Comment { color: #000; background-color: #efefef; }
+tr.cA td.Date    { color: #000; background-color: #efefef; }
+
+tr.cB td.Name    { color: #fff; background-color: #666; } /* #fff = white */
+tr.cB td.Comment { color: #000; background-color: #fff; }   /* #000 = black */
+tr.cB td.Date    { color: #000; background-color: #fff; }
+
+form.pmForm fieldset { margin: 5px 0; padding:0; width: 600px; }
+form.pmForm legend { padding: 0 2px 0 0; }
+form.pmForm p { margin: 0; padding: 0; }
+form.pmForm textarea { font: 12px "Lucida Grande",Tahoma,Verdana, Arial, sans-serif; margin: 3px 0; padding: 2px; background-color: #efefef; width: 600px; }
+form.pmForm select { margin: 0; padding: 0; border: 1px solid #999; background-color: #fff; }
+form.pmForm input { margin: 0; padding: 2px 4px; background-color: #efefef; color: #000; }
+form.pmForm input.submit { margin: 0; padding: 2px 4px; background-color: #1d476d; color: #fff; }
+/*End: Individual projects within project management tab */
+/* END:: Project Management System Styles */
+/**************************************/
+
+span.label, span.label-large, span.label-med, span.label-small, span.label-smaller, span.label-smallest
+{
+    font-weight:bold;
+    text-align: left; 
+    display: block; 
+    float: left; 
+    clear: left; 
+    padding: 0px 10px 0 0;
+    margin-left:20px;
+}
+
+form span.label, form span.label-large, form span.label-med, form span.label-small, form span.label-smaller, form span.label-smallest, span.data
+{
+    padding: 2px 10px 0 0;
+    height:18px; 
+}
+
+span.data
+{
+    display:block;
+}
+
+span.label-large { width: 175px; }
+span.label { width: 150px; }
+span.label-med { width: 125px; }
+span.label-small { width: 100px; }
+span.label-smaller { width: 75px; }
+span.label-smallest { width: 50px; }
+
+span.labelContainer-smallest span.label { width:50; }
+span.labelContainer-smaller span.label { width:75px; }
+span.labelContainer-small span.label { width:100px; }
+span.labelContainer-med span.label { width:125px; }
+span.labelContainer span.label { width:150px; }
+span.labelContainer-large span.label { width:175px; }
+
+
+/**************************************/
+/* BEGIN:: Career Fair Styles */
+
+.section {background-color: #eaeaea; border: solid 1px #666; padding: 10px;}
+.section h3 { margin: 0; background-color: #300; color: #fff; padding: 15px 10px 5px 10px; }
+.section p {padding-left:20px;}
+.section td.Comment p { padding-left:0px; }
+
+#invoice table {width:650px;}
+#invoice tr td {border: none;}
+.below1soft { border-bottom: solid 1px #AAA; }
+
+
+
+
+/* End Career Fair Styles */
+/**************************************/
+
+/* Company List Styles*/
+#companyList
+{
+    border: 1px solid #000000;
+    background-color:#F8F8F8;
+    border-left: 2px solid #000;
+    border-top: 1px solid #000;
+    margin-left: 40px;
+    width:300px;
+    
+}
+
+    #companyList div.body
+    {
+    left:20px;    
+    background: #E3E7E9; /* Old browsers */
+    padding: 3px 3px 3px 3px;
+    border-bottom:1px solid #000;
+    font-weight:normal;
+    }
+
+    
+#companyList div.body:hover, div.body:active
+    {
+        background-color:#D6DCE0;
+        color:#CF9;
+    }
+#companyList a
+{
+    font-weight:normal;
+    border-top:1px;
+    text-decoration: none;
+    height:100px;
+    
+}
+
+    #companyList a.wrapper:hover
+    {
+        background-color: #DEE3EA;
+    }
+
+#companyList div.staticActive
+{    
+    background-color: #D6DCE0;
+    border-bottom:1px solid #000;
+    padding: 3px 3px 3px 3px;
+}
+
+    #companyList a.companyListItem
+    {
+        font-size: 12pt;
+        color: #800;
+    }
+
+#companyList a:hover, a:active
+{
+   text-decoration:none; 
+}
+
+    #companyList div.subMenuBody
+    {
+        
+        font-weight:normal;
+        color:#000;
+        border-bottom:1px solid #000;   
+    }
+
+    #companyList div.subMenuCell
+    {
+        color: #000;
+        background-color: #E2DEDC; 
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+    
+    #companyList a.subCatLink
+    {
+        color:#000;
+        padding-left:7px;
+        font-size:14px;
+    }
+
+/* End Company List Styles*/
+
+
+
+/**************************************/
+
+#nav { 
+	/* Specified above: width, margin, z-index */
+	list-style: none;
+    width: 959px;
+	line-height:100%;
+	font-family:"Lucida Grande",Tahoma,Verdana,Helvetica,Arial,sans-serif;
+	color:#FFFFFF;
+	font-size:1em;
+	vertical-align:middle;
+	height: 36px;
+	z-index: 500;
+	padding: 0;
+	background: #000; /* for non-css3 browsers */
+	text-align:left;
+	/*Background Gradient*/
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000000', endColorstr='#808080'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#000), to(#800)); /* for webkit browsers */
+    background: -moz-linear-gradient(top,  #000000,  #808080); /* for firefox 3.6+ */
+
+}
+
+#nav a 
+{
+    /*Basic anchor definitions*/
+   	color:#FFFFFF;
+	height:100%;
+	text-decoration: none;
+}
+
+#nav a:hover,
+#nav a:active  
+{
+    /*
+        Basic anchor properties for hover, active
+      
+    */
+    
+    line-height: 100%;
+	color: #FFFFFF;
+	/*background-color: #A5B8B9;*/
+}
+
+#nav li 
+{
+    /*
+        Basic list item definitions.
+        -Float and block are only important properties
+            -Keep menu horizontal and in separate blocks instead of bullets
+    */
+    font-family:"Lucida Grande",Tahoma,Verdana,Helvetica,Arial,sans-serif;
+	font-size:1em;
+   	float: left;
+	padding: 0px 0px 0px 0px; 
+	position: relative;
+	z-index: 390; 
+	border:0;
+	height: 35px;
+    display:block;
+    width:auto;
+}
+
+#nav li a 
+{
+    /*
+        Anchors within links 
+        -Overwrite any upper lever definitions
+        -Padding keeps the proper vertical alignment, for whatever reason
+         vertical-align doesn't work in this code.
+    */
+    
+	float:left;
+	height: 26px;
+	display: block;
+	padding: 10px 5px 0px 5px;
+	margin: 0px 0px 0px 0px;
+	vertical-align: middle;
+}
+
+#nav li a:link,
+#nav li a:visited
+{
+   /*
+        Anchor definitions for any links
+        -Keep link items from being underlined
+    */    
+	
+	border: 0;
+	text-decoration: none;
+	display: block;
+}
+
+#nav li a:hover,
+#nav li:hover a  
+{
+    /*
+        List item anchor definitions during hover
+        -Don't change anything in here, it applies to everything
+    */ 
+    
+    display:block;
+    text-decoration: none; 
+}
+
+li:hover a.topLink,
+li a.topLink:hover
+
+{
+    /* 
+        Keeps the title highlighted when a sub menu is selected
+        -topLink is called on by each menu header, if more tabs are added, be sure to
+         have a call to topLink in the new <a> tag in the nav.asp file
+    */
+    
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#003366', endColorstr='#55aaee'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#003366), to(#55aaee)); /* for webkit browsers */
+    background: -moz-linear-gradient(top, #003366, #55aaee);
+    background-color:#003366;
+    line-height:100%;
+	font-family:"Lucida Grande",Tahoma,Verdana,Helvetica,Arial,sans-serif;
+	font-size:1em;
+}
+
+#nav li ul.subMenu 
+{
+  /*
+    Defines second level list class (vertical), subMenu
+    -Don't define background colors here, it won't work the way you want
+  */
+  
+  font-family:"Lucida Grande",Tahoma,Verdana,Helvetica,Arial,sans-serif;
+  text-align:left;
+  font-size:1em;
+  line-height: 100%;
+  position: absolute;
+  top:35px; 
+  left:-40px;
+  height:100%;
+  width:200px;
+  list-style:none;
+  display: none;
+  border: 0;
+}
+
+#nav li:hover ul.subMenu
+{ 
+    /* 
+        Most important part of menu!
+        -This makes the second level menu drop down.
+    */
+
+  display:block; 
+}
+
+    
+#nav li ul.subMenu li
+{
+    /*
+        Second level menu list item definitions
+        -Contains the basic characteristics
+        -Match             
+    */    
+         
+     text-align:left;
+     clear: left;
+     width: 200px;
+     border-bottom:0px;
+     height:36px;
+}
+
+#nav li ul.subMenu li a
+{
+     /*
+        Anchor definitions for anchors within subMenu list items
+        -Note that width is not 100%.  Padding within list causes the widths to be
+         slightly different.  
+        -If there's spacing issues or item overhang, look here to fix the problem.
+            -The width will be 10px less than the width of ul.subMenu
+     */
+          
+     filter:alpha(opacity=95);
+	-moz-opacity:0.95;
+	-khtml-opacity: 0.95;
+	 opacity: 0.95;
+	 width:190px;     
+}
+  
+#nav li ul.subMenu li a:link, 
+#nav li ul.subMenu li a:visited
+{
+    /*
+        Definitions for links in subMenu when inactive
+        -Be careful changing anything in here. It's pretty deep in the
+         code so the scope of any changes won't extend very far. Any major
+         changes should be applied higher up in the in code definitions.
+    */    
+    
+     color:#ccc;
+     text-decoration:none;
+     
+     clear: left;
+     z-index:1000;
+     background-color: #003366; 
+}
+
+
+#nav li ul.subMenu li:hover a,
+#nav li ul.subMenu li:active a
+{
+    /*
+        Hover definitions for subMenu list anchors
+        -It's important to set the opacity back to 100 here to really make the 
+         active item stand out
+        -Super important: IE can only read one filter line per class
+    */
+    filter: progid:DXImageTransform.Microsoft.Gradient(startColorstr='#55aaee', endColorstr='#003366'), alpha(opacity=100);
+    background: -webkit-gradient(linear, left top, left bottom, from(#55aaee), to(#003366)); /* for webkit browsers */
+    background: -moz-linear-gradient(top, #55aaee, #003366);    
+    background-color:#003366;
+	-moz-opacity:1;
+	-khtml-opacity: 1;
+	opacity: 1;
+	border:0;
+    font-weight:600;
+    clear:left;
+    color:#FFFFFF;
+    z-index:2000;
+}
+
+#nav img { border: 0px; }
+
+.loginStatus
+{
+	position:absolute;
+	top:0px;
+	right:2px;
+	text-align:right;
+	
+}
+.loginStatus a
+{
+	color:#ffffff;
+}
+
+.loginStatus ul
+{
+	margin-top:0px;
+	
+}
+
+.loginStatus li
+{
+	font-size: 0.9em;
+	color:#ffffff;
+	float: left;
+	margin: 0; 
+	position: relative;
+	z-index: 390; 
+	/*border-left: 1px dotted #666;*/
+	height: 35px;
+	list-style: none;
+}
+
+.loginStatus li.first
+{
+	color:#ffffff;
+	display:block;
+	border-left:none;
+}
+
+.loginStatus li.nolink
+{
+	color:#ffffff;
+	padding: 10px 5px 0px 5px;	
+}
+
+.loginStatus li a 
+{
+	padding: 10px 5px 0px 5px;
+	color:#ffffff;
+	margin: 0px 0px 0px 0px;
+	vertical-align: middle;
+	height: 25px;
+	float: left;
+	text-decoration: none;
+}
+
+.loginStatus a:hover
+{
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#003366', endColorstr='#55aaee'); /* for IE */
+    background: -webkit-gradient(linear, left top, left bottom, from(#003366), to(#55aaee)); /* for webkit browsers */
+    background: -moz-linear-gradient(top, #003366, #55aaee);
+    background-color:#003366;
+	display:block;
+	height:26px;
+}
+
+.loginStatus a:hover { 
+	
+	text-decoration: none;
+	
+}
+
+/* END NAV CODE */
+/**************************************/
+
+
+/**************************************/
+/* Footer Styles */
+#footer { clear: both; background-color: #800; font-size: 0.8em; line-height: 14px; text-align: center; color:#ddd; padding: 5px 0 10px 0; margin: 0; }
+#footer a { color: #ddd; }
+#footer p { padding: 15px 10px 25px 10px; margin: 0; }
+#footer p span.l { display:block; float: left; text-align: left; width: 499px; padding: 3px 0px 4px 0px; }
+#footer p span.r { display:block; float: left; text-align: right; width: 400px; }
+#footer p span a { padding: 3px 5px 4px 5px; margin: 0; }
+#footer p span a:hover { background-color: #1d476d; color: #ddd; text-decoration: none; }
+/* End Footer Styles */
+/**************************************/
+
+.NoVerticalSpace
+{
+	padding-top:0; 
+	padding-bottom:0;
+	margin-top:0;
+	margin-bottom:0;
+}

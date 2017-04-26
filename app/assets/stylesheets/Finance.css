@@ -1,0 +1,26 @@
+﻿.FauxTableHeader th
+{
+	font-weight:normal;
+	padding-left:3px;
+    padding-right:3px;
+    border:0;
+    background-color:#1d476d;
+    color:#ffffff;
+}
+
+.FauxTableHeader th a
+{
+	color:#ffffff;
+}
+
+.FauxTableHeader th.money
+{
+	width:90px;
+	text-align:right;
+}
+
+.SuperFauxHeader th
+{
+    background-color:#333;
+    font-weight:bold;
+}
