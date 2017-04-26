@@ -1,4 +1,4 @@
-
+@import 'bootstrap';
 
 /* ----Start Stylesheet---- */
 
@@ -329,7 +329,7 @@ a:active{
 	background-color: #444;
 }
 
-.blete-blurb-icon-left-square .blete-icon i{
+.blete-blurb-icon-left-square .blete-icon {
 	line-height: 70px;
 	color: #ffffff;
 	font-size: 36px;
