@@ -82,7 +82,7 @@
                     </button>
 
                     <!-- Logo -->
-                    <a class="navbar-brand" href="#top"><%= image_tag(("secbasic.png"), :class => "logo") %></a> <!--<img class="logo" id="logo" src="images/secbasic.png" alt="logo"></a>-->
+                    <a class="navbar-brand" href="#top"><%= image_tag("secbasic.png", :class => "logo") %></a> <!--<img class="logo" id="logo" src="images/secbasic.png" alt="logo"></a>-->
 
                 </div>
                 <!-- Navbar Toggle End -->
@@ -134,8 +134,8 @@
             <!-- Slides -->
             <div class="sp-slide blete-main-slides">
                 <div class="blete-img-overlay"></div>
-
-                <img class="sp-image" src="images/img-header/slider-img-1.jpg" alt="Slider 1"/>
+                <%= image_tag("slider-img-1.jpg", :class => "sp-image", :alt => "Slider 1") %>
+                <!--<img class="sp-image" src="images/img-header/slider-img-1.jpg" alt="Slider 1"/> -->
 
                 <h1 class="sp-layer blete-slider-text-big"
                 data-position="center" data-show-transition="left" data-hide-transition="right" data-show-delay="1500" data-hide-delay="200">
