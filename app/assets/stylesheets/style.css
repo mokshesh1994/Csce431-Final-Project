@@ -231,7 +231,7 @@ a:active{
 	background-size: 100%;
 }
 /* ----- Icon Style ----- */
-.blete-blurb-icon-only{
+.blete-blurb-icon-only i{
 	margin-bottom: 50px;
 }
 
@@ -770,9 +770,9 @@ header.blete-page-header .blete-main-menu.minified{
 
 
 /* ----- Skill Style ----- */
-.blete-our-skills{
+/*.blete-our-skills{
 	
-}
+} */
 
 .blete-our-skills .chart{
 	position: relative;
