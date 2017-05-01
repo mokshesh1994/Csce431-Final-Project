@@ -1,4 +1,4 @@
-﻿#header { height: 169px; background: #800 url('/images/trec/header.jpg') no-repeat center left; }
+#header { height: 169px; background: #800 url('/images/trec/header.jpg') no-repeat center left; }
 #footer, #nav { background: #800 url('/images/trec/footer.jpg') repeat center left; }
 #nav { background: #800 url('/images/trec/nav.jpg') repeat center left; height:38px; border-bottom:solid 2px black; }
 #footer { border-top:solid 2px black; }

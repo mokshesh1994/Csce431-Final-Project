@@ -11,7 +11,7 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 
 #css precompiled
-#Rails.application.config.assets.precompile += %w( admin.css )
+Rails.application.config.assets.precompile += %w( admin.css )
 Rails.application.config.assets.precompile += %w( magnific-popup.css )
 Rails.application.config.assets.precompile += %w( slider-pro.css )
 Rails.application.config.assets.precompile += %w( owl.carousel.css )
@@ -37,7 +37,6 @@ Rails.application.config.assets.precompile += %w( jquery.scrollUp.min.js )
 Rails.application.config.assets.precompile += %w( jquery.easypiechart.js )
 Rails.application.config.assets.precompile += %w( jquery.countTo.js )
 Rails.application.config.assets.precompile += %w( isotope.pkgd.min.js )
-Rails.application.config.assets.precompile += %w( jflickrfeed.min.js )
 Rails.application.config.assets.precompile += %w( jquery.fitvids.js )
 Rails.application.config.assets.precompile += %w( jquery.stellar.min.js )
 Rails.application.config.assets.precompile += %w( jquery.waypoints.min.js )
