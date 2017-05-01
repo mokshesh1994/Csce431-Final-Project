@@ -5,6 +5,7 @@ class CreatePositions < ActiveRecord::Migration
       t.string "name", :null => false, :limit => 50 
       t.string "type", :null => false, :limit => 50        # Executive board / Executive council
       t.timestamps null: false
+      t.attachment :image
     end
   end
   

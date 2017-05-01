@@ -451,7 +451,7 @@
                         
                         <div class="blete-blurb-icon-left-round">
                             <div class="blete-icon" data-toggle="tooltip" data-placement="right" title="The Career Fair is SEC's largest and most visible event of the year. The goal of the Texas A&M Engineering Career Fair is to provide students with the opportunity to visit with recruiters from hundreds of companies seeking engineers for internships, co-ops, and full-time positions. The committee organizes and plans the career fair in both the Spring and Fall semesters.">
-                                <i class="fa fa-building-o"></i>
+                               <!-- <i class="fa fa-building-o"></i> -->
                             </div>
                             <div class="blete-blurb-text">
                                 <h3>Career Fair</h3>
@@ -901,9 +901,9 @@
                             <div class ="event-images">
                                 <a href=<%=event.link_to_event %>, style="color: #998031;">
                                     <h3><%=event.name %></h3>
-                                </a>
+                                </a><br/>
                                 <a href= <%=event.link_to_event %>>
-                                    <img src= <%=event.image.url(:small) %>, alt="<% event.name %>">
+                                    <img src= <%=event.image.url %>, alt="<% event.name %>">
                                 </a>
                                 <div class="blete-port-work-details">
                                     <ul class="blete-work-meta">

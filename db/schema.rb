@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170419005514) do
+ActiveRecord::Schema.define(version: 20170501212410) do
 
   create_table "committees", force: :cascade do |t|
     t.string   "name",        limit: 50
@@ -44,17 +44,21 @@ ActiveRecord::Schema.define(version: 20170419005514) do
   create_table "members", force: :cascade do |t|
     t.integer  "position_id"
     t.integer  "division_id"
-    t.string   "name",            limit: 50, null: false
-    t.string   "email",           limit: 70, null: false
-    t.string   "major",           limit: 50, null: false
-    t.integer  "grad_year",       limit: 50, null: false
-    t.integer  "member_since",    limit: 50, null: false
-    t.string   "hometown",        limit: 50, null: false
+    t.string   "name",               limit: 50, null: false
+    t.string   "email",              limit: 70, null: false
+    t.string   "major",              limit: 50, null: false
+    t.integer  "grad_year",          limit: 50, null: false
+    t.integer  "member_since",       limit: 50, null: false
+    t.string   "hometown",           limit: 50, null: false
     t.text     "pro_interests"
     t.string   "picture"
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
     t.string   "password_digest"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "parameters", force: :cascade do |t|
@@ -113,10 +117,14 @@ ActiveRecord::Schema.define(version: 20170419005514) do
   end
 
   create_table "positions", force: :cascade do |t|
-    t.string   "name",       limit: 50, null: false
-    t.string   "pos_type",   limit: 50, null: false
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.string   "name",               limit: 50, null: false
+    t.string   "pos_type",           limit: 50, null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   create_table "sponsors", force: :cascade do |t|

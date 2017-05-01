@@ -4,6 +4,10 @@
     
     <table class="tableCenter">
         <tr>
+              <td class="columnLabel boldText">Picture:</td>
+            <td><%=image_tag @position.image.url(:small) %></td> 
+        </tr> 
+        <tr>
             <td class="columnLabel boldText">Name:</td>
             <td><%= @position.name %></td>
         </tr>

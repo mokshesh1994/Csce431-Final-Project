@@ -67,6 +67,6 @@ class PositionsController < ApplicationController
   private
   
   def position_params
-    params.require(:position).permit(:name, :pos_type)
+    params.require(:position).permit(:name, :pos_type, :image)
   end
 end
