@@ -897,10 +897,23 @@
                     <div id="featured-work-slider" class="owl-carousel blete-portfolio-works-slider">
 
                         
-                        <%# @events.each do |event| %>
-                        
-                        
-                        
+                        <% @events.each do |event| %>
+                            <div class ="event-images">
+                                <a href= <% event.link_to_event %> style="color: #998031;">
+                                    <h3><% event.name %></h3>
+                                </a>
+                                <a href= <% event.link_to_event %>>
+                                    <img src= <% event.image.url(:small) %> alt="eweek">
+                                </a>
+                                <div class="blete-port-work-details">
+                                    <ul class="blete-work-meta">
+                                        <!--<li class="blete-lighbox"><a href="images/event_slider/eweek.jpg" class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>-->
+                                    </ul>
+                                </div>
+    
+                            </div>
+                        <% end %>
+                            
                         <!-- Work 1 -->
                         <!--<div class="blete-portfolio-work-item">   Commented this out on every one to add links.-->
                         <!--
