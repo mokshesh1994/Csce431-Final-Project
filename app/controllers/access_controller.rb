@@ -21,9 +21,11 @@ class AccessController < ApplicationController
   # Index
   # ***********************************************************************
   def index
+    @committees = Committee.order(:name)
     @sponsors = Sponsor.order(:name)
     @events = Event.order(params[:id])
     @positions = Position.order(:id)
+    @members = Member.order(:id)
   end
   # ***********************************************************************
   # Validate user credentials..

@@ -7,7 +7,7 @@ class DivisionsController < ApplicationController
   # Display divisions.
   # ***********************************************************************
   def index
-    @divisions = Division.order(:name)
+    @divisions = Division.order(:id)
   end
 
   def show

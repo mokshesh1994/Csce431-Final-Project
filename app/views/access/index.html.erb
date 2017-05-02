@@ -445,158 +445,26 @@
                 </div>
                 <!-- Section Header End -->
 
-                <!-- Features -->
+
+
+
                 <div class="blete-features">
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-                        
-                        <div class="blete-blurb-icon-left-round">
-                            <div class="blete-icon" data-toggle="tooltip" data-placement="right" title="The Career Fair is SEC's largest and most visible event of the year. The goal of the Texas A&M Engineering Career Fair is to provide students with the opportunity to visit with recruiters from hundreds of companies seeking engineers for internships, co-ops, and full-time positions. The committee organizes and plans the career fair in both the Spring and Fall semesters.">
-                               <!-- <i class="fa fa-building-o"></i> -->
+                        <% @committees.each do |committee| %>
+                            
+                            <div class="col-md-4 col-sm-4 col-xs-12">
+                            
+                                <div class="blete-blurb-icon-left-round">
+                                    <div class="blete-icon", class="glyphicons glyphicons-thumbs-up", data-toggle="tooltip", data-placement="right", title="<%=committee.description %>">
+                                       <i class="fa fa-building-o"></i>
+                                    </div>
+                                    <div class="blete-blurb-text">
+                                        <h3><%=committee.name%></h3>
+                                    </div>
+                                </div>
+                                
                             </div>
-                            <div class="blete-blurb-text">
-                                <h3>Career Fair</h3>
-                            </div>
-                        </div>
-                        
-                        <div class="blete-blurb-icon-left-round">
-                            <div class="blete-icon" data-toggle="tooltip" data-placement="right" title="The Corporate Relations chair is responsible for maintaining professional ties with corporations and the Council's corporate sponsors. The chair invites representatives from companies to speak at SEC General Council meetings and is responsible for providing companies with sponsorship information.">
-                                <i class="fa fa-send-o"></i>
-                            </div>
-
-                            <div class="blete-blurb-text">
-                                <h3>Corporate Relations</h3>
-                            </div>
-                        </div>
-
-                        <div class="blete-blurb-icon-left-round">
-                            <div class="blete-icon" data-toggle="tooltip" data-placement="right" title="The ENGR 111/112 Industry Night Presentations serve to increase students' exposure to the wide variety of opportunities available within the College of Engineering and within the field of engineering after they graduate.">
-                                <i class="fa fa-street-view"></i>
-                            </div>
-
-                            <div class="blete-blurb-text">
-                                <h3>Engineering Development</h3>
-                            </div>
-                        </div>
-						
-						<div class="blete-blurb-icon-left-round">
-                            <div class="blete-icon" data-toggle="tooltip" data-placement="right" title="The Finance chair maintains all of SEC's finances. The committee collects member dues, processes Council expenditures and income, maintains the budgets for all committees within the organization, and communicates with the Student Organization Finance Center (SOFC).">
-                                <i class="fa fa-line-chart"></i>
-                            </div>
-
-                            <div class="blete-blurb-text">
-                                <h3>Finance</h3>
-                            </div>
-                        </div>
-						
-						<div class="blete-blurb-icon-left-round">
-                            <div class="blete-icon" data-toggle="tooltip" data-placement="right" title="ProTrip is an annual professional networking trip to expose SEC members to engineering opportunities outside of the state of Texas. The trip provides students with the opportunity to experience different engineering industries, professional workplaces, and the culture of a major U.S. city.">
-                                <i class="fa fa-road"></i>
-                            </div>
-
-                            <div class="blete-blurb-text">
-                                <h3>ProTrip</h3>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-
-                        <div class="blete-blurb-icon-left-round">
-                            <div class="blete-icon" data-toggle="tooltip" data-placement="right" title="The National Engineers Week (E-Week) committee is responsible for spreading engineering to all other students on campus. The committee runs an entire week of events, usually in February, where the main goals are increasing engineering awareness and breaking the common engineering stereotypes. This is a very dynamic committee that can easily incorporate new ideas every year.">
-                                <i class="fa fa-calendar"></i>
-                            </div>
-
-                            <div class="blete-blurb-text">
-                                <h3>E-Week</h3>
-                            </div>
-                        </div>
-
-                        <div class="blete-blurb-icon-left-round">
-                            <div class="blete-icon" data-toggle="tooltip" data-placement="right" title="The Spark Conference committee hosts an annual k-12 conference for students who are interested in pursuing an engineering degree. The conference includes tours and information relating to all disciplines of engineering that are offered at Texas A&M. The event is typically held over one day in the Fall semester.">
-                                <i class="fa fa-trophy"></i>
-                            </div>
-
-                            <div class="blete-blurb-text">
-                                <h3>Spark Conference</h3>
-                            </div>
-                        </div>
-
-                        <div class="blete-blurb-icon-left-round">
-                            <div class="blete-icon" data-toggle="tooltip" data-placement="right" title="The Philanthropy committee organizes and leads SEC in community service events of all kinds, as well as hosting Engineering Day (E-Day) for young students. Some typical philanthropy projects that are routinely performed are canned food drives, Angle Tree, Big Event, Replant, and Race for the Cure, just to name a few.">
-                                <i class="fa fa-child"></i>
-                            </div>
-
-                            <div class="blete-blurb-text">
-                                <h3>Philanthropy</h3>
-                            </div>
-                        </div>
-						
-						<div class="blete-blurb-icon-left-round">
-                            <div class="blete-icon" data-toggle="tooltip" data-placement="right" title="The Texas A&M Regional Engineering Conference (TREC) committee hosts a design competition for students at Texas A&M and surrounding universities in the Central Region of the United States. The competition is usually hosted over two days in the Spring and is well known for its amazing prizes. Members develop the concept, build the track/area for competition, plan social events, and run the two day event in its entirety.">
-                                <i class="fa fa-group"></i>
-                            </div>
-
-                            <div class="blete-blurb-text">
-                                <h3>TREC</h3>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-4 col-sm-4 col-xs-12">
-
-                        <div class="blete-blurb-icon-left-round">
-                            <div class="blete-icon" data-toggle="tooltip" data-placement="right" title="The Legislation committee is responsible for drafting a survey administered once a year to all engineering students asking them questions about their experiences within and concerns about the College. The committee analyzes the results and presents recommendations to the engineering deans and department heads at the Faculty Dinner, which is held after each survey.">
-                                <i class="fa fa-gavel"></i>
-                            </div>
-
-                            <div class="blete-blurb-text">
-                                <h3>Legislation</h3>
-                            </div>
-                        </div>
-
-                        <div class="blete-blurb-icon-left-round">
-                            <div class="blete-icon" data-toggle="tooltip" data-placement="right" title="The Society and Graduate Relations committee is responsible for maintaining relations with the several engineering societies across the campus. The committee hosts several events that bring members of the Council together with members of the various societies.">
-                                <i class="fa fa-comments"></i>
-                            </div>
-
-                            <div class="blete-blurb-text">
-                                <h3>Society and Graduate Relations</h3>
-                            </div>
-                        </div>
-
-                        <div class="blete-blurb-icon-left-round">
-                            <div class="blete-icon" data-toggle="tooltip" data-placement="right" title="The Marketing Committee is responsible for effectively and creatively promoting events hosted by the SEC and the College of Engineering. The committee members work closely with other SEC committees to develop and implement marketing materials and strategies needed to increase awareness of engineering events.">
-                                <i class="fa fa-camera-retro"></i>
-                            </div>
-
-                            <div class="blete-blurb-text">
-                                <h3>Marketing</h3>
-                            </div>
-                        </div>
-						
-						<div class="blete-blurb-icon-left-round">
-                            <div class="blete-icon" data-toggle="tooltip" data-placement="right" title="The Membership committee serves the Council's members by hosting social events, assigning members to committees, tracking member points, and facilitating the member selection process.">
-                                <i class="fa fa-user-plus"></i>
-                            </div>
-
-                            <div class="blete-blurb-text">
-                                <h3>Membership</h3>
-                            </div>
-                        </div>
-						
-						<div class="blete-blurb-icon-left-round">
-                            <div class="blete-icon" data-toggle="tooltip" data-placement="right" title="The Systems Administration Committee contributes to SEC by applying the latest technologies to ease the lives of council members and better disseminate information.  The committee is responsible for adding features and content to the website, keeping the office servers and workstations running and up to date, and finding innovative ways to use the latest technology to help SEC fulfill its mission statement.">
-                                <i class="fa fa-database"></i>
-                            </div>
-
-                            <div class="blete-blurb-text">
-                                <h3>Systems Administration</h3>
-                            </div>
-                        </div>
-
-                    </div>
+                        <% end %>
+                            
                 </div>
                 <!-- Features End -->
 
@@ -790,417 +658,69 @@
 
             <div class="blete-portfolio-items">
 
-                <!-- Portfolio Items -->
-                <div class="item blete-portfolio-item internal">
-
-                    <img src="images/img-portfolio/slide1.jpg">
-                    <div class="blete-portfolio-details-wrapper">
-                        <div class="blete-portfolio-details">
-                            <div class="blete-portfolio-meta-btn">
-                                <ul>
-                                    <li class="blete-lighbox"><a href="images/img-portfolio/slide2.jpg" class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
-                                </ul>
+                
+                <% @members.each do |member| %>
+                
+                    <% if member.division_id == 4 %>  <!-- 4 = internal division id -->
+                        <div class="item blete-portfolio-item internal">
+        
+                            <img src=<%=member.image.url %>>
+                            
+                            <div class="blete-portfolio-details-wrapper">
+                                <div class="blete-portfolio-details">
+                                    <div class="blete-portfolio-meta-btn">
+                                        <ul>
+                                            <li class="blete-lighbox"><a href=<%=member.image.url %>, class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                     <% end %>
+                <%end %>
+                
+                
+                    
+                <%@members.each do |member| %>
+                    <% if member.division_id == 1 %>  <!-- 1 = development division id -->
+                        <div class="item blete-portfolio-item development">
 
-                </div>
-                <!-- Portfolio Items End -->
-
-                <!-- Portfolio Items -->
-                <div class="item blete-portfolio-item internal">
-
-                    <img src="images/img-portfolio/slide3.jpg">
-                    <div class="blete-portfolio-details-wrapper">
-                        <div class="blete-portfolio-details">
-                            <div class="blete-portfolio-meta-btn">
-                                <ul>
-                                    <li class="blete-lighbox"><a href="images/img-portfolio/slide4.jpg" class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
-                                </ul>
+                            <img src=<%=member.image.url %>>
+                            <div class="blete-portfolio-details-wrapper">
+                                <div class="blete-portfolio-details">
+                                    <div class="blete-portfolio-meta-btn">
+                                        <ul>
+                                            <li class="blete-lighbox"><a href=<%=member.image.url %>, class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
+    
                         </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-
-                <!-- Portfolio Items -->
-                <div class="item blete-portfolio-item internal">
-
-                    <img src="images/img-portfolio/slide5.jpg">
-                    <div class="blete-portfolio-details-wrapper">
-                        <div class="blete-portfolio-details">
-                            <div class="blete-portfolio-meta-btn">
-                                <ul>
-                                    <li class="blete-lighbox"><a href="images/img-portfolio/slide6.jpg" class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
-                                </ul>
+                    
+                    <% end %>
+                    
+                <% end %>
+                
+                <% @members.each do |member| %>    
+                    <% if member.division_id == 2 %> <!-- 2 = external division -->
+                        <div class="item blete-portfolio-item external">
+    
+                            <img src=<%=member.image.url %>>
+                            <div class="blete-portfolio-details-wrapper">
+                                <div class="blete-portfolio-details">
+                                    <div class="blete-portfolio-meta-btn">
+                                        <ul>
+                                            <li class="blete-lighbox"><a href=<%=member.image.url %>, class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
+    
                         </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-
-                <!-- Portfolio Items -->
-                <div class="item blete-portfolio-item internal">
-
-                    <img src="images/img-portfolio/slide7.jpg">
-                    <div class="blete-portfolio-details-wrapper">
-                        <div class="blete-portfolio-details">
-                            <div class="blete-portfolio-meta-btn">
-                                <ul>
-                                    <li class="blete-lighbox"><a href="images/img-portfolio/slide8.jpg" class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Portfolio Items -->
-
-                <!-- Portfolio Items -->
-                <div class="item blete-portfolio-item internal">
-
-                   <img src="images/img-portfolio/slide9.jpg">
-                    <div class="blete-portfolio-details-wrapper">
-                        <div class="blete-portfolio-details">
-                            <div class="blete-portfolio-meta-btn">
-                                <ul>
-                                    <li class="blete-lighbox"><a href="images/img-portfolio/slide10.jpg" class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-
-                <!-- Portfolio Items -->
-                <div class="item blete-portfolio-item internal">
-
-                    <img src="images/img-portfolio/slide11.jpg">
-                    <div class="blete-portfolio-details-wrapper">
-                        <div class="blete-portfolio-details">
-                            <div class="blete-portfolio-meta-btn">
-                                <ul>
-                                    <li class="blete-lighbox"><a href="images/img-portfolio/slide12.jpg" class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-
-                <div class="item blete-portfolio-item internal">
-
-                    <img src="images/img-portfolio/slide13.jpg">
-                    <div class="blete-portfolio-details-wrapper">
-                        <div class="blete-portfolio-details">
-                            <div class="blete-portfolio-meta-btn">
-                                <ul>
-                                    <li class="blete-lighbox"><a href="images/img-portfolio/slide14.jpg" class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-
-                <!-- Portfolio Items -->
-                <div class="item blete-portfolio-item internal">
-
-                    <img src="images/img-portfolio/slide15.jpg">
-                    <div class="blete-portfolio-details-wrapper">
-                        <div class="blete-portfolio-details">
-                            <div class="blete-portfolio-meta-btn">
-                                <ul>
-                                    <li class="blete-lighbox"><a href="images/img-portfolio/slide16.jpg" class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-
-                <!-- Portfolio Items -->
-                <div class="item blete-portfolio-item development">
-
-                    <img src="images/img-portfolio/slide17.jpg">
-                    <div class="blete-portfolio-details-wrapper">
-                        <div class="blete-portfolio-details">
-                            <div class="blete-portfolio-meta-btn">
-                                <ul>
-                                    <li class="blete-lighbox"><a href="images/img-portfolio/slide18.jpg" class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-
-                <!-- Portfolio Items -->
-                <div class="item blete-portfolio-item development">
-
-                    <img src="images/img-portfolio/slide19.jpg">
-                    <div class="blete-portfolio-details-wrapper">
-                        <div class="blete-portfolio-details">
-                            <div class="blete-portfolio-meta-btn">
-                                <ul>
-                                    <li class="blete-lighbox"><a href="images/img-portfolio/slide20.jpg" class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-
-                <!-- Portfolio Items -->
-                <div class="item blete-portfolio-item development">
-
-                    <img src="images/img-portfolio/slide21.jpg">
-                    <div class="blete-portfolio-details-wrapper">
-                        <div class="blete-portfolio-details">
-                            <div class="blete-portfolio-meta-btn">
-                                <ul>
-                                    <li class="blete-lighbox"><a href="images/img-portfolio/slide22.jpg" class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-
-                <!-- Portfolio Items -->
-                <div class="item blete-portfolio-item development">
-
-                    <img src="images/img-portfolio/slide23.jpg">
-                    <div class="blete-portfolio-details-wrapper">
-                        <div class="blete-portfolio-details">
-                            <div class="blete-portfolio-meta-btn">
-                                <ul>
-                                    <li class="blete-lighbox"><a href="images/img-portfolio/slide24.jpg" class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-                                <!-- Portfolio Items -->
-                <div class="item blete-portfolio-item development">
-
-                    <img src="images/img-portfolio/slide25.jpg">
-                    <div class="blete-portfolio-details-wrapper">
-                        <div class="blete-portfolio-details">
-                            <div class="blete-portfolio-meta-btn">
-                                <ul>
-                                    <li class="blete-lighbox"><a href="images/img-portfolio/slide26.jpg" class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-                                <!-- Portfolio Items -->
-                <div class="item blete-portfolio-item development">
-
-                    <img src="images/img-portfolio/slide27.jpg">
-                    <div class="blete-portfolio-details-wrapper">
-                        <div class="blete-portfolio-details">
-                            <div class="blete-portfolio-meta-btn">
-                                <ul>
-                                    <li class="blete-lighbox"><a href="images/img-portfolio/slide28.jpg" class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-                                <!-- Portfolio Items -->
-                <div class="item blete-portfolio-item development">
-
-                    <img src="images/img-portfolio/slide29.jpg">
-                    <div class="blete-portfolio-details-wrapper">
-                        <div class="blete-portfolio-details">
-                            <div class="blete-portfolio-meta-btn">
-                                <ul>
-                                    <li class="blete-lighbox"><a href="images/img-portfolio/slide30.jpg" class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-                                <!-- Portfolio Items -->
-                <div class="item blete-portfolio-item development">
-
-                    <img src="images/img-portfolio/slide31.jpg">
-                    <div class="blete-portfolio-details-wrapper">
-                        <div class="blete-portfolio-details">
-                            <div class="blete-portfolio-meta-btn">
-                                <ul>
-                                    <li class="blete-lighbox"><a href="images/img-portfolio/slide32.jpg" class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-                                <!-- Portfolio Items -->
-                <div class="item blete-portfolio-item development">
-
-                    <img src="images/img-portfolio/slide33.jpg">
-                    <div class="blete-portfolio-details-wrapper">
-                        <div class="blete-portfolio-details">
-                            <div class="blete-portfolio-meta-btn">
-                                <ul>
-                                    <li class="blete-lighbox"><a href="images/img-portfolio/slide34.jpg" class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-                                <!-- Portfolio Items -->
-                <div class="item blete-portfolio-item external">
-
-                    <img src="images/img-portfolio/slide35.jpg">
-                    <div class="blete-portfolio-details-wrapper">
-                        <div class="blete-portfolio-details">
-                            <div class="blete-portfolio-meta-btn">
-                                <ul>
-                                    <li class="blete-lighbox"><a href="images/img-portfolio/slide36.jpg" class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-                                <!-- Portfolio Items -->
-                <div class="item blete-portfolio-item external">
-
-                    <img src="images/img-portfolio/slide37.jpg">
-                    <div class="blete-portfolio-details-wrapper">
-                        <div class="blete-portfolio-details">
-                            <div class="blete-portfolio-meta-btn">
-                                <ul>
-                                    <li class="blete-lighbox"><a href="images/img-portfolio/slide38.jpg" class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-                                <!-- Portfolio Items -->
-                <div class="item blete-portfolio-item external">
-
-                    <img src="images/img-portfolio/slide39.jpg">
-                    <div class="blete-portfolio-details-wrapper">
-                        <div class="blete-portfolio-details">
-                            <div class="blete-portfolio-meta-btn">
-                                <ul>
-                                    <li class="blete-lighbox"><a href="images/img-portfolio/slide40.jpg" class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-                                <!-- Portfolio Items -->
-                <div class="item blete-portfolio-item external">
-
-                    <img src="images/img-portfolio/slide41.jpg">
-                    <div class="blete-portfolio-details-wrapper">
-                        <div class="blete-portfolio-details">
-                            <div class="blete-portfolio-meta-btn">
-                                <ul>
-                                    <li class="blete-lighbox"><a href="images/img-portfolio/slide42.jpg" class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-                                <!-- Portfolio Items -->
-                <div class="item blete-portfolio-item external">
-
-                    <img src="images/img-portfolio/slide43.jpg">
-                    <div class="blete-portfolio-details-wrapper">
-                        <div class="blete-portfolio-details">
-                            <div class="blete-portfolio-meta-btn">
-                                <ul>
-                                    <li class="blete-lighbox"><a href="images/img-portfolio/slide44.jpg" class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-
-                <!-- Portfolio Items -->
-                <div class="item blete-portfolio-item external">
-
-                    <img src="images/img-portfolio/slide45.jpg">
-                    <div class="blete-portfolio-details-wrapper">
-                        <div class="blete-portfolio-details">
-                            <div class="blete-portfolio-meta-btn">
-                                <ul>
-                                    <li class="blete-lighbox"><a href="images/img-portfolio/slide46.jpg" class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-
-                <!-- Portfolio Items -->
-                <div class="item blete-portfolio-item external">
-
-                    <img src="images/img-portfolio/slide47.jpg">
-                    <div class="blete-portfolio-details-wrapper">
-                        <div class="blete-portfolio-details">
-                            <div class="blete-portfolio-meta-btn">
-                                <ul>
-                                    <li class="blete-lighbox"><a href="images/img-portfolio/slide48.jpg" class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
-                                <!-- Portfolio Items -->
-                <div class="item blete-portfolio-item web-design">
-
-                    <img src="images/img-portfolio/slide49.jpg">
-                    <div class="blete-portfolio-details-wrapper">
-                        <div class="blete-portfolio-details">
-                            <div class="blete-portfolio-meta-btn">
-                                <ul>
-                                    <li class="blete-lighbox"><a href="images/img-portfolio/slide49.jpg" class="blete-featured-work-img"><i class="fa fa-search"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                <!-- Portfolio Items End -->
+                        
+                    <% end %>
+                <% end %>
                 
 
             </div>

@@ -36,6 +36,7 @@ class MembersController < ApplicationController
   # ***********************************************************************
   def edit
     @member = Member.find(params[:id])
+    #@position = Position.where(params[:id])
   end
   
   def update
