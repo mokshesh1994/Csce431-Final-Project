@@ -13,6 +13,10 @@
                 <td class="columnLabel boldText">Type:</td>
                 <td><%= @position.pos_type %></td>
             </tr>
+            <tr>
+                <td class="columnLabel boldText">Major:</td>
+                <td><%= @position.major %></td>
+            </tr>
         </table>
         <div class="divCenter">
             <%= f.submit("Delete Position", :class => "btn btn-danger btn-sm") %>

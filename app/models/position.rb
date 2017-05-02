@@ -6,4 +6,6 @@ class Position < ActiveRecord::Base
     validates_length_of :name, :maximum => 50
     validates_presence_of :pos_type
     validates_length_of :pos_type, :maximum => 50
+    validates_presence_of :major
+    validates_length_of :major, :maximum => 50
 end

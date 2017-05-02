@@ -7,7 +7,7 @@ class PositionsController < ApplicationController
   # Display positions.
   # ***********************************************************************
   def index
-    @positions = Position.order(:name)
+    @positions = Position.order(:id)
   end
 
   def show
@@ -67,6 +67,6 @@ class PositionsController < ApplicationController
   private
   
   def position_params
-    params.require(:position).permit(:name, :pos_type, :image)
+    params.require(:position).permit(:name, :pos_type, :major, :image)
   end
 end

@@ -20,44 +20,48 @@
        
        <!-- wrapper for slides -->
        <!-- creating the active picture class by making the first sponsor in the database call -->
+       <!-- 
        <div class="carousel-inner">
            <div class="item active">
                <p class="col-sm-offset-5 col-sm-6">
-               <img src=<%= @sponsors[0].image.url(:small) %>, class="image-rounded" alt="active image">
+               <img src=<%#= @sponsors[0].image.url(:small) %>, class="image-rounded" alt="active image">
                </p>
                <h3 class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">
                     <font color="500000">
-                        <b><%= @sponsors[0].name %></b>
+                        <b><#%= @sponsors[0].name %></b>
                     </font>
                 </h3>
                 <p class="col-sm-offset-5 col-sm-2">
                     <font size="-1" color="000000">
-                        <%= @sponsors[0].spn_type %> Sponsor
+                        <%#= @sponsors[0].spn_type %> Sponsor
                     </font>
                 </p>
            </div>
+           -->
            
            <!-- creating the rest of the carousel for the rest of the items in the database --> 
-           <% @sponsors[1..@sponsors.size].each do |sponsor| %>
+           <!--
+           <%# @sponsors[1..@sponsors.size].each do |sponsor| %>
            <div class="item">
                <p class="col-sm-offset-5 col-sm-6">
-                   <img src=<%= sponsor.image.url(:small) %> alt="el Koala">
+                   <img src=<%#= sponsor.image.url(:small) %> alt="el Koala">
                </p>
                
                 <h3 class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1">
                     <font color="500000">
-                        <b><%= sponsor.name %></b>
+                        <b><%#= sponsor.name %></b>
                     </font>
                 </h3>
                 
                 <p class="col-md-8 col-sm-10 col-xs-12 col-md-offset-2 col-sm-offset-1"> <!-- description of sponsor -->
-                            <%= sponsor.description %>
+                
+            <!--                <%#= sponsor.description %>
                 </p>
            </div>
           
-           <% end %>
+           <%# end %>
        </div>
-       
+       -->
        <!-- controls -->
        <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
            <span class="glyphicon glyphicon-menu-left"></span>

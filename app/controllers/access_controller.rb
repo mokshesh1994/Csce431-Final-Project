@@ -23,6 +23,7 @@ class AccessController < ApplicationController
   def index
     @sponsors = Sponsor.order(:name)
     @events = Event.order(params[:id])
+    @positions = Position.order(:id)
   end
   # ***********************************************************************
   # Validate user credentials..
