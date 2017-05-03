@@ -132,7 +132,7 @@ ActiveRecord::Schema.define(version: 20170502010835) do
     t.string   "name",               limit: 40, null: false
     t.text     "description"
     t.string   "spn_type",           limit: 40, null: false
-    t.string   "logo" #a change was made here from logo to image
+    t.string   "logo"
     t.string   "link_to_sec"
     t.string   "link_to_sponsor"
     t.datetime "created_at",                    null: false
