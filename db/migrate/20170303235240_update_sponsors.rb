@@ -4,6 +4,6 @@ class UpdateSponsors < ActiveRecord::Migration
   end
   
   def down
-    rename_column(:sponsors, :spn_type, :type)
+    rename_column(:sponsors, :type, :spn_type)
   end  
 end
